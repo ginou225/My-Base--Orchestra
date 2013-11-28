@@ -1,0 +1,72 @@
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 0.8em;
+}
+
+h6 {
+	font-size: 0.7em;
+}
+
+a {
+	color: #08C;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    position: relative; 
+}
+
+a:hover { color: #0AF; }
+
+//Icon List 
+
+[class*="icon-"] {
+	text-indent: -9999px;
+	background: url("images/icons.png") no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.icon-rss {
+	background-position: 3px 2px;
+}
+
+.icon-rss {
+	background-position: 3px 2px;
+}
+
+.icon-fb {
+	background-position: 6px -193px;
+}
+
+.icon-tw {
+	background-position: 3px -38px;
+}
+
+.icon-gp {
+	background-position: 3px -78px;
+}
+
+.icon-ln {
+	background-position: 3px -117px;
+}
+
+.icon-yt {
+	background-position: 3px -153px;
+}
