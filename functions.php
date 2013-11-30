@@ -1,6 +1,16 @@
 <?php
 
 /****************************************
+Hybrid Core
+*****************************************/
+
+/* Load the class file. */
+require_once( trailingslashit( get_template_directory() ) . 'hybrid/hybrid.php' );
+
+/* Call the class. */
+new Hybrid();
+
+/****************************************
 Theme Setup
 *****************************************/
 

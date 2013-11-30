@@ -70,6 +70,29 @@ function mb_setup() {
 	// Define custom post type capabilities for use with Members
 	add_action( 'admin_init', 'mb_add_post_type_caps' );
 
+	/****************************************
+	Hybrid
+	*****************************************/
+
+	/* Add theme support for core framework features. */
+	//add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
+	add_theme_support( 'hybrid-core-styles', array( 'gallery','style' ) );
+	add_theme_support( 'hybrid-core-drop-downs' );
+	add_theme_support( 'hybrid-core-menus' );
+	add_theme_support( 'hybrid-core-post-meta-box' );
+	add_theme_support( 'hybrid-core-seo' );
+	add_theme_support( 'hybrid-core-shortcodes' );
+	add_theme_support( 'hybrid-core-sidebars' );
+	add_theme_support( 'hybrid-core-template-hierarchy' );
+	add_theme_support( 'hybrid-core-widgets' );
+	
+	/* Add theme support for framework extensions. */
+	add_theme_support( 'post-layouts' );
+	add_theme_support( 'post-stylesheets' );
+	add_theme_support( 'loop-pagination' );
+	add_theme_support( 'get-the-image' );
+	add_theme_support( 'breadcrumb-trail' );
+
 
 	/****************************************
 	Frontend
