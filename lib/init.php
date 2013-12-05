@@ -28,7 +28,12 @@ function mb_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Add Editor Style
-	add_editor_style( 'editor-style.css' );
+	add_editor_style( 
+		array(
+			'lib/post_format_ui/editor/css/editor-style.css', 
+			'lib/post_format_ui/editor/fonts/genericons.css'
+		) 
+	);
 
 	// Don't update theme
 	add_filter( 'http_request_args', 'mb_dont_update_theme', 5, 2 );
