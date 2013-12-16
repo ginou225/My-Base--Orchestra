@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             compass: {
@@ -53,9 +54,8 @@ module.exports = function(grunt) {
                     sourceMapPrefix: 2
                 },
                 files: {
-                    'assets/js/plugins.min.js': [
+                    'assets/js/plugins.js': [
                         'assets/js/source/plugins.js',
-                        // 'assets/js/vendor/yourplugin/yourplugin.js',
                     ]
                 }
             },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
                     sourceMapPrefix: 2
                 },
                 files: {
-                    'assets/js/main.min.js': [
+                    'assets/js/main.js': [
                         'assets/js/source/main.js'
                     ]
                 }
@@ -86,6 +86,18 @@ module.exports = function(grunt) {
                     src: '**/*',
                     dest: 'assets/images/'
                 }]
+            }
+        },
+
+        // Requirejs optimized with r.js
+        requirejs: {
+            compile: {
+              options: {
+                name: "build",
+                baseUrl: "./assets",
+                mainConfigFile: "./assets/build.js",
+                out: "./assets/build/optimized.js",
+              }
             }
         },
 
@@ -119,5 +131,8 @@ module.exports = function(grunt) {
 
     // register task
     grunt.registerTask('default', ['watch']);
+
+    // Release Task
+    grunt.registerTask('build', ['requirejs']);
 
 };
