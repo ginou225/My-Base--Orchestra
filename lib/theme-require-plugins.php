@@ -8,20 +8,6 @@ function mb_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' 				=> 'WordPress SEO by Yoast',
-			'slug' 				=> 'wordpress-seo',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
-
-		array(
-			'name' 				=> 'Use Google Libraries',
-			'slug' 				=> 'use-google-libraries',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
-
-		array(
 			'name' 				=> 'Pods - Custom Content Types and Fields',
 			'slug' 				=> 'pods',
 			'required' 			=> true,
@@ -31,9 +17,49 @@ function mb_register_required_plugins() {
 		array(
 			'name' 				=> 'Google Analytics for WordPress',
 			'slug' 				=> 'google-analytics-for-wordpress',
-			'required' 			=> true,
+			'required' 			=> false,
 			'force_activation'	=> true
 		),
+
+		array(
+			'name' 				=> 'Event Organiser',
+			'slug' 				=> 'event-organiser',
+			'required' 			=> false,
+			'force_activation'	=> true
+		),
+
+		array(
+			'name' 				=> 'Jigoshop',
+			'slug' 				=> 'jigoshop',
+			'required' 			=> false,
+			'force_activation'	=> true
+		),
+
+		array(
+			'name' 				=> 'WordPress SEO by Yoast',
+			'slug' 				=> 'wordpress-seo',
+			'required' 			=> false,
+			'force_activation'	=> true
+		),
+
+		// Pre-packaged with a theme
+        array(
+            'name'          	=> 'Wp Visual Composer',
+            'slug'          	=> 'js_composer',
+            'source'        	=> get_stylesheet_directory() . '/lib/plugins/js_composer.zip',
+            'required'      	=> false, 
+            'force_activation'  => false, 
+            'external_url'      => '',
+        ),
+
+        array(
+            'name'          	=> 'Templatura',
+            'slug'          	=> 'templatura',
+            'source'        	=> get_stylesheet_directory() . '/lib/plugins/templatura.zip',
+            'required'      	=> false, 
+            'force_activation'  => false, 
+            'external_url'      => '',
+        ),
 
 	);
 
