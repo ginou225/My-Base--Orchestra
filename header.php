@@ -18,7 +18,8 @@
 	<div id="container">
 
 		<header>
-			<a id="logo" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
+			<i class="fa fa-heart"></i>
+			<a id="logo" href="<?php echo home_url( '/' ); ?>"> <?php bloginfo( 'name' ); ?></a>
 			<div class="description"><?php bloginfo( 'description' ); ?></div>
 		</header>
 
