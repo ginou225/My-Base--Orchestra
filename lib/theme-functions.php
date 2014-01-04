@@ -147,6 +147,7 @@ Frontend
 function mb_scripts() {
 	// CSS first
 	wp_enqueue_style( 'mb_style' );
+	//wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.css' );
 
 	// JavaScript
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
