@@ -10,6 +10,8 @@ Base Starter Theme for use as a starting template for building custom themes. Us
 
 #### Version 2.0
 
+* Added Font Awesome
+* Added Redux Framework
 * update to Hybrid Core 1.6.2
 * update to Foundation 5
 
@@ -21,6 +23,6 @@ Without these projects, this WordPress Starter Theme wouldn't be where it is tod
 * [Normalize.css](http://necolas.github.com/normalize.css)
 * [SASS / SCSS](http://sass-lang.com/)
 * [Compass](http://compass-style.org)
-* [Foundation 5](zurb.foundation.com)
+* [Foundation 5](foundation.zurb.com)
 * [Underscores Theme](https://github.com/Automattic/_s)
 * [Grunt](http://gruntjs.com/)
