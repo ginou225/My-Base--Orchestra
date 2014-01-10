@@ -8913,6 +8913,98 @@ th.hide-for-touch {
   content: "\f196";
 }
 
+@font-face {
+  font-family: "dashicons";
+  src: url("assets/scss/partials/fonts/dashicons.woff") format("woff"), url("fonts/dashicons.ttf") format("truetype"), url("fonts/dashicons.svg#dashicons") format("svg"), url("assets/scss/partials/fonts/dashicons.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dashicons {
+  font-family: "dashicons";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  -moz-transition: color .1s ease-in 0;
+  -webkit-transition: color .1s ease-in 0;
+}
+
+/* Both Admin Menu and Post Formats */
+.dashicons-admin-links:before,
+.dashicons-format-links:before {
+  content: "\f103";
+}
+
+.dashicons-admin-post:before,
+.dashicons-format-standard:before {
+  content: "\f109";
+}
+
+/* Post Format Icons */
+.dashicons-format-image:before {
+  content: "\f128";
+}
+
+.dashicons-format-gallery:before {
+  content: "\f161";
+}
+
+.dashicons-format-audio:before {
+  content: "\f127";
+}
+
+.dashicons-format-video:before {
+  content: "\f126";
+}
+
+.dashicons-format-chat:before {
+  content: "\f125";
+}
+
+.dashicons-format-status:before {
+  content: "\f130";
+}
+
+.dashicons-format-aside:before {
+  content: "\f123";
+}
+
+.dashicons-format-quote:before {
+  content: "\f122";
+}
+
+.dashicons-camera:before {
+  content: "\f306";
+}
+
+.dashicons-images-alt:before {
+  content: "\f232";
+}
+
+.dashicons-images-alt2:before {
+  content: "\f233";
+}
+
+.dashicons-video-alt:before {
+  content: "\f234";
+}
+
+.dashicons-video-alt2:before {
+  content: "\f235";
+}
+
+.dashicons-video-alt3:before {
+  content: "\f236";
+}
+
 h1 {
   font-size: 1.8em;
 }
@@ -8948,42 +9040,6 @@ a {
 
 a:hover {
   color: #0AF;
-}
-
-[class*="icon-"] {
-  text-indent: -9999px;
-  background: url("images/icons.png") no-repeat;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-}
-
-.icon-rss {
-  background-position: 3px 2px;
-}
-
-.icon-rss {
-  background-position: 3px 2px;
-}
-
-.icon-fb {
-  background-position: 6px -193px;
-}
-
-.icon-tw {
-  background-position: 3px -38px;
-}
-
-.icon-gp {
-  background-position: 3px -78px;
-}
-
-.icon-ln {
-  background-position: 3px -117px;
-}
-
-.icon-yt {
-  background-position: 3px -153px;
 }
 
 /* GENERAL */

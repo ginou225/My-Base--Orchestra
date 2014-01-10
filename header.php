@@ -19,6 +19,7 @@
 
 		<header>
 			<i class="fa fa-heart"></i>
+			<i class="dashicons dashicons-format-standard"></i>
 			<a id="logo" href="<?php echo home_url( '/' ); ?>"> <?php bloginfo( 'name' ); ?></a>
 			<div class="description"><?php bloginfo( 'description' ); ?></div>
 		</header>
