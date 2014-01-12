@@ -89,11 +89,13 @@ textarea {
 	float: left;
 	margin-right: 1.5em;
 }
+
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
+
 .aligncenter {
 	clear: both;
 	display: block;
@@ -187,12 +189,12 @@ img {
 }
 
 .img_res, .attachment-img_res {
-  max-width: 100%;
+  max-width: $fullWidth;
   height: auto;
 }
 
 .img_full, .attachment-img_full {
-  width: 100% !important;
+  width: $fullWidth !important;
 }
 
 // A better looking default horizontal rule 
@@ -220,10 +222,8 @@ textarea {
     resize: vertical;
 }
 
-table { width: 100%; }
-
-.full-width {
-  width: 100%;
+table, .full { 
+    width: $fullWidth; 
 }
 
 .no_back {

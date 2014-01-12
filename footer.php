@@ -3,9 +3,11 @@
 			<p>&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?></p>
 		</footer>
 
-	</div> <!-- /#container -->
+  		</div>
+		<!-- /wrap -->
+	</div>
 
-  <?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>

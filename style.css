@@ -611,11 +611,7 @@ textarea {
   resize: vertical;
 }
 
-table {
-  width: 100%;
-}
-
-.full-width {
+table, .full {
   width: 100%;
 }
 
@@ -9042,14 +9038,27 @@ a:hover {
   color: #0AF;
 }
 
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.menu li {
+  float: none;
+}
+.menu a {
+  display: block;
+}
+
 /* GENERAL */
 a,
 a:visited {
-  color: red;
+  color: #336699;
 }
 
 a:hover {
-  color: blue;
+  color: #003399;
 }
 
 ::-moz-selection {
