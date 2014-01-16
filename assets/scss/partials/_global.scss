@@ -10,11 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html,
-button,
-input,
-select,
-textarea {
+html, button, input, select, textarea {
     color: #222;
 }
 
@@ -249,3 +245,5 @@ table, .full {
 .float-right  {
     float: right;
 }
+
+//

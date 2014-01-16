@@ -415,11 +415,7 @@ table {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html,
-button,
-input,
-select,
-textarea {
+html, button, input, select, textarea {
   color: #222;
 }
 
@@ -9038,17 +9034,86 @@ a:hover {
   color: #0AF;
 }
 
-.menu {
-  list-style: none;
+/* Header Footer */
+.master_head, .master_foot {
+  background-color: #ccc;
+}
+
+/* navigation */
+.master_nav {
+  background-color: #eee;
+}
+
+.main_nav > ul a {
+  border-right: 1px solid #ddd;
+  padding: 1em 0.5em;
+  display: block;
+}
+.main_nav > ul a:hover {
+  color: #fff;
+  background-color: #ccc;
+}
+
+.sub-menu {
+  background-color: #eee;
+}
+
+/* Drop-down styles. */
+div.menu ul, nav.menu ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+  line-height: 1.0;
   float: left;
 }
-.menu li {
-  float: none;
+
+div.menu ul ul, nav.menu ul ul {
+  position: absolute;
+  top: -999em;
+  width: 10em;
 }
-.menu a {
+
+div.menu ul ul li, nav.menu ul ul li {
+  width: 100%;
+}
+
+div.menu li:hover, nav.menu li:hover {
+  visibility: inherit;
+}
+
+div.menu li, nav.menu li {
+  float: left;
+  position: relative;
+}
+
+div.menu a, nav.menu a {
   display: block;
+  position: relative;
+}
+
+div.menu li:hover ul, div.menu li.sfHover ul, nav.menu li:hover ul, nav.menu li.sfHover ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 99;
+}
+
+div.menu li:hover li ul, div.menu li.sfHover li ul, nav.menu li:hover li ul, nav.menu li.sfHover li ul {
+  top: -999em;
+}
+
+div.menu li li:hover ul, div.menu li li.sfHover ul, nav.menu li li:hover ul, nav.menu li li.sfHover ul {
+  left: 10em;
+  top: 0;
+}
+
+div.menu li li:hover li ul, div.menu li li.sfHover li ul, nav.menu li li:hover li ul, nav.menu li li.sfHover li ul {
+  top: -999em;
+}
+
+div.menu li li li:hover ul, div.menu li li li.sfHover ul, nav.menu li li li:hover ul, nav.menu li li li.sfHover ul {
+  left: 10em;
+  top: 0;
 }
 
 /* GENERAL */

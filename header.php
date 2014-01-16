@@ -14,49 +14,40 @@
 
 		<div class="inner-wrap">
 
-		    <a class="left-off-canvas-toggle" >Menu</a> 
+			<header class="master_head hide-for-medium-up">
+				<a class="left-off-canvas-toggle" >Menu</a> 
+			</header>
 
-		    <!-- Off Canvas Menu -->
-		    <aside class="left-off-canvas-menu">
-		        <!-- whatever you want goes here -->
-		        <menu>
-		        	<li><a href="#">Item 1</a></li>
-		        	<li><a href="#">Item 1</a></li>
-		        </menu>
-		    </aside>
-
-			<!-- close the off-canvas menu -->
-			<a class="exit-off-canvas"></a>
-
-			<header class="master-head full">
+			<header class="master_head full show-for-large-up">
 				<div class="row">
-					<section class="columns">
+					<section class="columns large-6">
 						<h1 class="site_title">
 							<a href="<?php echo home_url( '/' ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
 						</h1>
 					</section>
-					<div class="columns">222</div>
+					<div class="columns large-6">222</div>
 				</div>
 			</header>
 
-			<div class="main-nav full">
+			<div class="master_nav full show-for-large-up">
 				<div class="row">
-					<?php
-						$defaults = array(
-							'theme_location'  => 'primary',
-							'menu'            => '',
-							'container'       => 'nav',
-							'container_class' => 'column',
-							'container_id'    => 'main-nav',
-							'menu_class'      => 'menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-						);
-						wp_nav_menu( $defaults );
-					?>
-					<div class="column">
-						
+					<div class="site_nav column large-9">
+						<?php
+							$defaults = array(
+								'theme_location'  => 'primary',
+								'menu'            => '',
+								'container'       => 'nav',
+								'container_class' => 'menu main_nav',
+								'container_id'    => 'main_navigation',
+								'menu_class'      => '',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+							);
+							wp_nav_menu( $defaults );
+						?></div>
+					<div class="column large-3">
+						<?php get_search_form(); ?>
 					</div>
 				</div>
 			</div>

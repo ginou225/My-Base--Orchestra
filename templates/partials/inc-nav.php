@@ -1,9 +1,6 @@
 <?php
 /**
  * The template used for displaying post navigation
- *
- * @package mattbanks
- * @since mattbanks 2.5
  */
 ?>
 

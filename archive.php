@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-	<section id="main" role="main">
+<section id="main" class="page_container" role="main">
+	<div class="content_container row">
+		<!-- content -->
+		<div class="content columns large-8">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -56,10 +59,11 @@
 			?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<article <?php post_class() ?>>
 
-						<h1 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+						<h1 id="post-<?php the_ID(); ?>">
+							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+						</h1>
 
 						<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
 
@@ -68,19 +72,23 @@
 						</div>
 
 				</article>
-
 			<?php endwhile; ?>
 
 			<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
 
-	<?php else : ?>
+			<?php else : ?>
 
-		<h1>Nothing found</h1>
+				<h1>Nothing found</h1>
 
-	<?php endif; ?>
+			<?php endif; ?>
 
-	</section> <!-- /#main -->
+		</div>
+		<!-- /content -->
+		
+		<?php get_sidebar(); ?>
 
-<?php get_sidebar(); ?>
+	</div>
+</section> 
+<!-- /#main -->
 
 <?php get_footer(); ?>

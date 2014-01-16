@@ -1,9 +1,6 @@
 <?php
 /**
  * The template used for displaying page content in single.php
- *
- * @package mattbanks
- * @since mattbanks 2.5
  */
 ?>
 

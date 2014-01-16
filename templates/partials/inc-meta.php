@@ -1,9 +1,6 @@
 <?php
 /**
  * The template used for displaying post meta information
- *
- * @package mattbanks
- * @since mattbanks 2.5
  */
 ?>
 

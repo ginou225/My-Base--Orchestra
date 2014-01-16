@@ -1,9 +1,6 @@
 <?php
 /**
  * The template for displaying Comments.
- *
- * @package mattbanks
- * @since mattbanks 2.6
  */
 ?>
 

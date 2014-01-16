@@ -81,6 +81,7 @@ function mb_setup() {
 
 	/* Add theme support for core framework features. */
 	//add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
+	add_theme_support( 'hybrid-core-scripts', array( 'drop-downs' ) );
 	add_theme_support( 'hybrid-core-styles', array( 'gallery','style' ) );
 	add_theme_support( 'hybrid-core-drop-downs' );
 	add_theme_support( 'hybrid-core-menus' );
