@@ -1,2 +1,2 @@
-!function(a){"use strict";a(function(){a(document).foundation()})}(jQuery);
+!function(a){"use strict";a(function(){a(document).foundation(),a("#masonryContainer").masonry({itemSelector:".masonry-brick",columnWidth:320,isAnimated:!0})})}(jQuery);
 //# sourceMappingURL=main.js.map

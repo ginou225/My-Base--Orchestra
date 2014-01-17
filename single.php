@@ -4,13 +4,13 @@
 	<div class="content_container row">
 		<!-- content -->
 		<div class="content columns large-8">
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'templates/partials/content', 'single' ); ?>
-
-				<?php comments_template(); ?>
-
-			<?php endwhile; ?>
+			<div><?php while ( have_posts() ) : the_post(); ?>
+				
+					<?php get_template_part( 'templates/partials/content', get_post_format()  ); ?>
+				
+					<?php comments_template(); ?>
+				
+				<?php endwhile; ?></div>
 		</div>
 		<!-- /content -->
 

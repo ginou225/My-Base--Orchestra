@@ -98,6 +98,22 @@ textarea {
 	margin: 0 auto;
 }
 
+.floatleft {
+    float: left;
+}
+ 
+.floatright  {
+    float: right;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.textright {
+  text-align: right;
+}
+
 /* Text meant only for screen readers */
 .assistive-text {
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -236,14 +252,6 @@ table, .full {
  
 .show {
     display: block;
-}
-
-.float-left {
-    float: left;
-}
- 
-.float-right  {
-    float: right;
 }
 
 //

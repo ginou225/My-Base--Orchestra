@@ -38,6 +38,120 @@ code, tt { }
 .meta { }
 .postmetadata { }
 
+/* Block and Masonry blocks */
+
+.post_blog {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	position: relative;
+
+	.post_head {
+		text-align: center;
+	}
+
+	.post_thumb {
+		overflow: hidden;
+		position: relative;
+
+		.img_clip {
+			height: 200px;
+		}
+
+		h6 {
+			color: #fff;
+		}
+	}
+
+	.dashicons {
+		font-size: 38px;
+		width: 38px;
+		height: 38px;
+	}
+}
+
+.post_title .title {
+	.title {
+		padding: 5px 8px;
+	}
+}
+
+.post_footer {
+	color: #666;
+	font-size: 0.8em;
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+	padding: 10px 5px;
+}
+
+#masonryContainer { 
+	width: 0 auto;
+
+	.masonry-brick { 
+	 	width: 300px; 
+		margin: 5px; 
+		float: left;  
+  }
+}
+
+.format_icon {
+	color: #fff;
+	background-color: #555;
+	border: 8px solid rgba(0, 0, 0, 0.2);
+	background-clip: padding-box;
+	margin: -2.5em auto 0;
+	width: 80px;
+	height: 80px;
+	position: relative;
+	z-index: 100;
+
+	.format {
+		margin-left: -20px;
+		margin-top: -20px;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		left: 50%;
+		top: 51%; 
+	}
+}
+
+/* Sinister */
+
+.post-image {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	* {
+		-webkit-transition: all 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+/* -------------------- Scale Transform Effects -------------------- */
+.background-scale:hover img {-webkit-transform: scale(1.2);transform: scale(1.2);}
+
+/* -------------------- ol/ul Transform Effects -------------------- */
+/* -------------------- Buttons Color Scheme -------------------- */
+.post-image li.white-rounded{background-color: #ffffff;border: medium none;display: inline-block !important;float: none !important;font-size: 14px;font-weight: normal;height: 40px;line-height: 40px;margin: 0 2px;text-align: center;width: 40px;border-radius: 250px 250px 250px;box-shadow: 0 0 1px rgba(0,0,0,0.5),inset 0 0 2px rgba(0,0,0,.1);}
+.post-image li.white-rounded > a {color: #222222;display: block;font-weight: normal;}
+
+/* |||||||||||||||||| ol/ul Styles |||||||||||||||||| */
+/* -------------------- Static Style -------------------- */
+.post-image .static-style {visibility: hidden;margin: 0;opacity: 0;position: absolute;text-align: center;width: 100%;top: 50%;margin-top: -20px;z-index: 299;}
+.post-image:hover .static-style {opacity: 1;-webkit-transition: all .3s ease .3s;transition: all .3s ease .3s;visibility: visible;}
+/* -------------------- Common Style -------------------- */
+.post-image ol.common-style {visibility: hidden;margin: 0;opacity: 0;position: absolute;text-align: center;width: 100%;top: 50%;margin-top: -20px;visibility: visible;}
+.post-image:hover ol.common-style {opacity: 1;visibility: visible;}
+/* -------------------- Long Style -------------------- */
+.post-image .long-style {visibility: hidden;margin: 0;opacity: 0;position: absolute;text-align: center;width: 100%;top: 50%;margin-top: -15px;z-index: 299;}
+.post-image:hover .long-style {opacity: 1;-webkit-transition: all .6s ease 1.0s;transition: all .6s ease 1.0s;visibility: visible;}
+/* -------------------- Image Overlay 1 -------------------- */
+.post-image .img-overlay {position: absolute; background-color: rgba(0, 0, 0, 0.7); width: 100%;height: 100%;top: 0;left: 0;opacity: 0;}
+.post-image:hover .img-overlay {opacity: .6;visibility: visible;}
+
+
+
 /* SHARING */
 
 .sharing h4 { margin-bottom: 0; padding-bottom: 0; }

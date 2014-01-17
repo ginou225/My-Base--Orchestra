@@ -8,6 +8,12 @@
  
 	$(function() {
 		$(document).foundation();
+
+		$('#masonryContainer').masonry({  
+	    	itemSelector: '.masonry-brick',
+	    	columnWidth: 320,
+	    	isAnimated: true
+        }); 
 	});
  
 }(jQuery));

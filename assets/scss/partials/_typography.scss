@@ -1,12 +1,4 @@
-@font-face {
-    font-family: "dashicons";
-    src: url("assets/scss/partials/fonts/dashicons.woff") format('woff'),
-    	 url("fonts/dashicons.ttf") format("truetype"),
-		 url("fonts/dashicons.svg#dashicons") format("svg"),
-		 url("assets/scss/partials/fonts/dashicons.eot"); 
-	font-weight: normal;
-	font-style: normal;
-}
+@include fontface('dashicons', 'assets/scss/partials/fonts', 'dashicons');
 
 .dashicons {
 	font-family: "dashicons";
@@ -39,6 +31,10 @@
 
 
 /* Post Format Icons */
+
+.dashicons-edit:before {
+	content:"\f464";
+}
 
 .dashicons-format-image:before {
 	content: "\f128";

@@ -6,7 +6,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h1><?php the_title(); ?></h1>
+	<header class="entry_head">
+		<h1 class="entry_title"><?php the_title(); ?></h1>
+	</header>
 
 	<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
 
