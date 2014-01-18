@@ -11,18 +11,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php twentyfourteen_post_thumbnail(); ?>
 
-
-<?php if (have_posts()) :
-while (have_posts()) : the_post();
-if(!get_post_format()) {
-get_template_part('format', 'standard');
-} else {
-get_template_part('format', get_post_format());
-}
-endwhile;
-endif;
-?>
-
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<div class="entry-meta">

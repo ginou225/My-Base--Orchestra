@@ -15,7 +15,7 @@
             			<div class="post_head">
               				<!-- thumbnail -->
 		                	<figure class="post_thumb post-image background-scale">
-			                    <img src="http://placehold.it/500x300" alt="#">
+			                   	<?php the_post_thumbnail(); ?>
 			                    <div class="img-overlay pat-override"></div>
 			                    <ol class="common-style">
 			                        <!-- <li class="white-rounded"><a href=""><i class="fa fa-search"></i></a>
@@ -29,9 +29,7 @@
 							
 							<!-- format icon -->
 			                <div class="format_icon img-circle">
-			                    <span class="format">
-			                    	<i class="dashicons dashicons-edit"></i>
-			            	    </span>
+			                   <?php get_template_part( 'templates/includes/inc', 'post-format-icon' ); ?>
 			                </div>
 			                <!-- /format icon -->
             			</div>
