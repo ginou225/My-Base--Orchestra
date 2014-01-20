@@ -46,11 +46,20 @@
 						<!-- post footer -->
 		                <footer class="post_footer">
 			                <div class="row">
-			                    <div class="columns small-6 large-8">
-			                    	<i class="fa fa-comments"></i> Comment
+			                    <div class="columns small-6 large-7">
+			                    	<i class="fa fa-comments"></i> 
+			                    	<?php // if ( ( comments_open() ) ) : ?>
+									<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment' ), __( '1 Comment' ), __( '% Comments') ); ?></span>
+									<?php // endif; ?>
 			                    </div>
-			                    <div class="columns small-6 large-4">
-			                    	<i class="fa fa-heart"></i> Likes
+			                    <div class="columns small-6 large-5">
+			                    	<i class="fa fa-star"></i> 
+			                    	<?php
+										$category = get_the_category();
+										if ($category) {
+										  echo '<a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category[0]->name ) . '" ' . '>' . $category[0]->name.'</a> ';
+										}
+									?>
 			                    </div>
 			                </div>
 		                </footer>
