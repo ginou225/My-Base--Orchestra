@@ -99,13 +99,19 @@ function mb_setup() {
 	add_theme_support( 'get-the-image' );
 	add_theme_support( 'breadcrumb-trail' );
 
+	/* Add media support of post formats */
+	//add_theme_support( 'hybrid-core-media-grabber' );
+
+	// Image support
+	add_image_size( 'post-image-small', 300, 300 ); // Permalink thumb
+
 
 	/****************************************
 	Frontend
 	*****************************************/
 
 	// Add Post Formats Theme Support
-	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video') );
+	add_theme_support( 'post-formats', array('video', 'gallery', 'link', 'image', 'quote', 'audio') );
 
 	// Enqueue scripts
 	add_action( 'wp_enqueue_scripts', 'mb_scripts' );

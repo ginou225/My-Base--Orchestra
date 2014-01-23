@@ -11,8 +11,9 @@
 
 		$('#masonryContainer').masonry({  
 	    	itemSelector: '.masonry-brick',
-	    	columnWidth: 320,
-	    	isAnimated: true
+	    	columnWidth: 310,
+	    	isFitWidth: true,
+	    	isAnimated: true,
         }); 
 	});
  

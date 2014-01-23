@@ -4,10 +4,13 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php hybrid_post_attributes(); ?>>
 	
-	<figure class="featured">
-		video
+	<figure class="featured entry_video flex-video">
+		<?php
+		$video = wp_oembed_get( esc_url( get_post_meta( $post->ID, '_format_video_embed', true ) ) );
+		echo $video;
+		?>
 	</figure>
 
 	<header class="entry_head">
@@ -15,7 +18,7 @@
 	</header>
 	<!-- /entry-header -->
 
-	<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
+	<?php //get_template_part( 'templates/partials/inc', 'meta' ); ?>
 
 	<div class="entry-content">
 		<?php the_content();?>

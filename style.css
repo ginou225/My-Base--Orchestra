@@ -9034,25 +9034,39 @@ h6 {
   font-size: 0.7em;
 }
 
-a {
-  color: #08C;
+a, a:visited {
+  color: #336699;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   position: relative;
 }
-
-a:hover {
-  color: #0AF;
+a:hover, a:visited:hover {
+  color: #003399;
 }
 
-/* Header Footer */
+/*Table of Contents
+1: Header / Footer
+2: Navigation
+3: Search
+
+*/
+.row {
+  max-width: 70rem;
+}
+
+.brick_container {
+  margin: 0 auto;
+  width: 62.5rem;
+}
+
+/* 1: Header Footer */
 .master_head, .master_foot {
   background-color: #ccc;
 }
 
-/* navigation */
+/* 2: Navigation */
 .master_nav {
   background-color: #eee;
 }
@@ -9129,16 +9143,11 @@ div.menu li li li:hover ul, div.menu li li li.sfHover ul, nav.menu li li li:hove
   top: 0;
 }
 
+.searchform input {
+  margin-bottom: 0;
+}
+
 /* GENERAL */
-a,
-a:visited {
-  color: #336699;
-}
-
-a:hover {
-  color: #003399;
-}
-
 ::-moz-selection {
   background: orange;
   text-shadow: none;
@@ -9149,23 +9158,12 @@ a:hover {
   text-shadow: none;
 }
 
-/* HEADINGS / TYPOGRAPHY */
-h1, h2, h3, h4 {
-  font-weight: normal;
-  margin: 0 0 10px 0;
-}
-
 /* STRUCTURE */
 #container {
   max-width: 1000px;
   margin: 20px auto;
 }
 
-/* HEADER */
-/* NAV */
-/* MAIN */
-/* SIDEBAR */
-/* FOOTER */
 /****************************************
 PAGE TEMPLATES
 *****************************************/
@@ -9173,14 +9171,8 @@ PAGE TEMPLATES
 /* Blog Page */
 /* POSTS */
 article {
-  clear: both;
   margin: 0 0 35px 0;
-}
-
-blockquote {
-  background: url(assets/images/icons/blockquote.png) no-repeat 0 12px;
-  padding: 10px 20px 10px 50px;
-  font-style: italic;
+  clear: both;
 }
 
 .entry .wp-caption.aligncenter {
@@ -9188,8 +9180,8 @@ blockquote {
 }
 
 img.wp-smiley {
-  padding: 0;
   border: none;
+  padding: 0;
 }
 
 /* Block and Masonry blocks */
@@ -9233,7 +9225,7 @@ img.wp-smiley {
   width: 0 auto;
 }
 #masonryContainer .masonry-brick {
-  width: 310px;
+  width: 300px;
   margin: 5px;
   float: left;
 }
@@ -9259,120 +9251,137 @@ img.wp-smiley {
   top: 51%;
 }
 
-/* Sinister */
-.post-image {
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+/* Big Image */
+.meta {
+  color: #999999;
+  font-size: 0.9em;
+  padding: 10px;
 }
-.post-image * {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+.meta dd {
+  border-bottom: 1px dotted #cccccc;
+  margin-bottom: 5px;
+  display: block;
+}
+.meta dd:last-child {
+  border: none;
+}
+.meta a {
+  color: #999999;
+}
+.meta:hover fa {
+  font-size: 110%;
 }
 
-/* -------------------- Scale Transform Effects -------------------- */
+.meta_vertical .inline-list > li {
+  margin-left: 0.8em;
+}
+
+.post_image_big {
+  margin-bottom: 1em !important;
+}
+.post_image_big .post_head {
+  margin-bottom: 1em;
+}
+.post_image_big:last-child {
+  border: none;
+}
+.post_image_big .meta {
+  border: 1px solid #cccccc;
+}
+.post_image_big .clip {
+  max-height: 300px;
+}
+
+.post_image_small {
+  margin-bottom: 1em !important;
+}
+.post_image_small .post_head {
+  margin-bottom: 1em;
+}
+.post_image_small .entry_container {
+  border: 1px solid #cccccc;
+  width: 100%;
+  float: left;
+}
+
+/* Sinister */
+/* Scale Transform Effects  */
 .background-scale:hover img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-/* -------------------- ol/ul Transform Effects -------------------- */
-/* -------------------- Buttons Color Scheme -------------------- */
+.post-image {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  /* ol/ul Transform Effects - Buttons Color Scheme */
+  /* common styles */
+  /* image overlay */
+}
+.post-image * {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 .post-image li.white-rounded {
-  background-color: #ffffff;
-  border: medium none;
-  display: inline-block !important;
-  float: none !important;
   font-size: 14px;
   font-weight: normal;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 2px;
   text-align: center;
-  width: 40px;
-  border-radius: 250px 250px 250px;
+  line-height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 2px rgba(0, 0, 0, 0.1);
+  margin: 0 2px;
+  width: 40px;
+  height: 40px;
+  float: none !important;
+  display: inline-block !important;
 }
-
 .post-image li.white-rounded > a {
   color: #222222;
-  display: block;
   font-weight: normal;
+  display: block;
 }
-
-/* |||||||||||||||||| ol/ul Styles |||||||||||||||||| */
-/* -------------------- Static Style -------------------- */
-.post-image .static-style {
-  visibility: hidden;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  margin-top: -20px;
-  z-index: 299;
-}
-
-.post-image:hover .static-style {
-  opacity: 1;
-  -webkit-transition: all .3s ease .3s;
-  transition: all .3s ease .3s;
-  visibility: visible;
-}
-
-/* -------------------- Common Style -------------------- */
 .post-image ol.common-style {
-  visibility: hidden;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
   text-align: center;
-  width: 100%;
-  top: 50%;
+  margin: 0;
   margin-top: -20px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
   visibility: visible;
+  position: absolute;
+  top: 50%;
 }
-
 .post-image:hover ol.common-style {
   opacity: 1;
   visibility: visible;
 }
-
-/* -------------------- Long Style -------------------- */
-.post-image .long-style {
-  visibility: hidden;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  margin-top: -15px;
-  z-index: 299;
-}
-
-.post-image:hover .long-style {
-  opacity: 1;
-  -webkit-transition: all .6s ease 1.0s;
-  transition: all .6s ease 1.0s;
-  visibility: visible;
-}
-
-/* -------------------- Image Overlay 1 -------------------- */
 .post-image .img-overlay {
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
+  opacity: 0;
+  position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
 }
-
 .post-image:hover .img-overlay {
   opacity: .6;
   visibility: visible;
+}
+
+/* POST FORMATS */
+/* quotes */
+blockquote {
+  border: 0;
+}
+
+.quote_big {
+  border: 1px solid #cccccc;
+}
+.quote_big .fa {
+  color: #cccccc;
 }
 
 /* SHARING */
@@ -9410,6 +9419,20 @@ img.wp-smiley {
 }
 
 /* POST NAVIGATION */
+.pagination {
+  padding: 10px;
+}
+.pagination .prev, .pagination .next {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+.pagination .current {
+  color: #fff;
+  background-color: #cccccc;
+  padding: 2px 3px;
+  display: inline-block;
+}
+
 .navgation {
   clear: both;
 }
@@ -9420,10 +9443,6 @@ img.wp-smiley {
 
 .prev-posts {
   float: right;
-}
-
-.sidebar {
-  padding-top: 15px;
 }
 
 .child_nav {

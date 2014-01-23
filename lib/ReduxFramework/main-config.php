@@ -280,10 +280,124 @@ if (!function_exists('redux_init')) :
 	**********************************************************/
 	$sections[] = array(
 		'icon' => 'el-icon-cogs',
-		'desc' => __('Blah', 'redux-framework-demo'),
+		'desc' => __('General layout settings', 'redux-framework-demo'),
 		'title' => __('General Settings', 'redux-framework-demo'),
-		'fields' => array()
+		'fields' => array(	
+			array(
+				'id'=>'blog_layout',
+				'type' => 'select',
+				'title' => __('Blog Layout', 'redux-framework-demo'), 
+				'subtitle' => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
+				'options' => array('masonry'=>'Masonry', 'big_image'=>'Big Image','small_image'=>'Small Image'),
+				'default' => 'big_image',
+				),					
+			),
+		);
+
+	/*** divide ***/
+	$sections[] = array(
+		'type' => 'divide',
 	);
+
+	/*********************************************************
+		* Social Settings *
+	**********************************************************/
+	$sections[] = array(
+		'icon' => 'el-icon-bullhorn',
+		'desc' => __('Social networks', 'redux-framework-demo'),
+		'title' => __('Social Settings', 'redux-framework-demo'),
+		'fields' => array(
+			array(
+				'id'=>'s_rss',
+				'type' => 'switch',
+				'title' => __('RSS', 'redux-framework-demo'),
+				'subtitle' => __('Turn RSS on or off'),
+				'desc' => __('', 'redux-framework-demo'),
+				'on' => 'Enabled',
+				'off' => 'Disabled',
+				),	
+			array(
+				'id'=>'s_facebook',
+				'type' => 'text',
+				'title' => __('Facebook', 'redux-framework-demo'),
+				'subtitle' => __('www.facebook.com'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://www.facebook.com/ProfileName'),
+				),
+			array(
+				'id'=>'s_twitter',
+				'type' => 'text',
+				'title' => __('Twitter', 'redux-framework-demo'),
+				'subtitle' => __('www.twitter.com'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('https://twitter.com/UserName'),
+				),	
+			array(
+				'id'=>'s_googe_plus',
+				'type' => 'text',
+				'title' => __('Google+', 'redux-framework-demo'),
+				'subtitle' => __('https://plus.google.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('https://plus.google.com/UserName'),
+				),
+			array(
+				'id'=>'s_linked_in',
+				'type' => 'text',
+				'title' => __('Linked In', 'redux-framework-demo'),
+				'subtitle' => __('http://linkedin.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://www.linkedin.com/UserName'),
+				),	
+			array(
+				'id'=>'s_skype',
+				'type' => 'text',
+				'title' => __('Skype', 'redux-framework-demo'),
+				'subtitle' => __('http://www.skype.com/en/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://www.skype.com/en/UserName'),
+				),
+			array(
+				'id'=>'s_pintrest',
+				'type' => 'text',
+				'title' => __('Pintrest', 'redux-framework-demo'),
+				'subtitle' => __('https://www.pinterest.com/‎'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('https://www.pinterest.com/‎UserName'),
+				),
+			array(
+				'id'=>'s_youtube',
+				'type' => 'text',
+				'title' => __('YouTube', 'redux-framework-demo'),
+				'subtitle' => __('http://www.youtube.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://www.youtube.com/UserName'),
+				),	
+			array(
+				'id'=>'s_tumbler',
+				'type' => 'text',
+				'title' => __('Tumbler', 'redux-framework-demo'),
+				'subtitle' => __('https://www.tumblr.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('https://www.tumblr.com/Name'),
+				),
+			array(
+				'id'=>'s_dribbble',
+				'type' => 'text',
+				'title' => __('Dribbble', 'redux-framework-demo'),
+				'subtitle' => __('http://dribbble.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://dribbble.com/UserName'),
+				),
+			array(
+				'id'=>'s_instagram',
+				'type' => 'text',
+				'title' => __('Instagram', 'redux-framework-demo'),
+				'subtitle' => __('http://instagram.com/'),
+				'desc' => __('', 'redux-framework-demo'),
+				'placeholder' => __('http://instagram.com/UserName'),
+				),	
+			),
+		);
 
 	/*** divide ***/
 	$sections[] = array(

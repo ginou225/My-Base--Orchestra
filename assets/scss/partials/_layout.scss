@@ -1,9 +1,26 @@
-/* Header Footer */
+/*Table of Contents
+1: Header / Footer
+2: Navigation
+3: Search
+
+*/
+
+.row {
+	max-width: 70rem;
+}
+
+.brick_container {
+	margin: 0 auto;
+	width: 62.5rem;
+}
+
+
+/* 1: Header Footer */
 .master_head, .master_foot {
 	background-color: #ccc;
 }
 
-/* navigation */
+/* 2: Navigation */
 .master_nav {
 	background-color: #eee;
 }
@@ -79,4 +96,10 @@ div.menu li li:hover li ul, div.menu li li.sfHover li ul, nav.menu li li:hover l
 div.menu li li li:hover ul, div.menu li li li.sfHover ul, nav.menu li li li:hover ul, nav.menu li li li.sfHover ul {
 	left: 10em;
 	top: 0;
+}
+
+.searchform {
+	input {
+		margin-bottom: 0;
+	}
 }

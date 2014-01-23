@@ -25,7 +25,9 @@
 							<a href="<?php echo home_url( '/' ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
 						</h1>
 					</section>
-					<div class="columns large-6">222</div>
+					<div class="columns large-6">
+						<?php get_template_part('templates/includes/inc', 'sociallist'); ?>
+					</div>
 				</div>
 			</header>
 
@@ -49,5 +51,16 @@
 					<div class="column large-3">
 						<?php get_search_form(); ?>
 					</div>
+				</div>
+			</div>
+
+			<div class="page_title_container full">
+				<div class="row">
+					<section class="columns large-8">
+						<h1 class="page_title">
+							<?php get_template_part('templates/includes/inc', 'pagetitle'); ?>
+						</h1>
+					</section>
+					<section class="columns large-4"></section>
 				</div>
 			</div>

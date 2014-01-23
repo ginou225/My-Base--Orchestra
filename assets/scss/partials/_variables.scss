@@ -1,9 +1,14 @@
 // Font Face
 //@include fontface('dashicons', 'assets/scss/partials/fonts', 'dashicons');
 
+// Colors
+$grey-mid           : #ccc;
+$grey-text          : #999;
+
 // Structure
 $pageWidth: 1000px;
 $fullWidth: 100%;
+$margin-bottom-block: 1em;
 
 // Text Selection
 $selectionColor: orange;

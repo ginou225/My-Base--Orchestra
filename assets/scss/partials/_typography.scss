@@ -116,13 +116,14 @@ h6 {
 	font-size: 0.7em;
 }
 
-a {
-	color: #08C;
+a, a:visited {
+	color: $linkColor;
     text-decoration: none;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     position: relative; 
+    &:hover {
+    	color: $linkHoverColor;
+    }
 }
-
-a:hover { color: #0AF; }

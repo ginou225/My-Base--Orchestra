@@ -3,10 +3,10 @@
  * The template used for displaying a search form
  */
 ?>
-<form action="/" method="get">
+<form class="searchform" action="<?php bloginfo('url'); ?>/" method="get">
    <div class="row collapse">
    	<div class="columns small-10 large-10">
-   		<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+   		<input type="text" name="s" id="search" placeholder="<?php _e('Search ', 'orchestra'); bloginfo('name') ?>" value="" />
    	</div>
    	<div class="columns small-2 large-2">
    		<input type="submit" value="go" alt="Search" />
