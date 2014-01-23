@@ -6,24 +6,61 @@
 	<title><?php wp_title(''); ?></title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/apple-touch-icon.png">
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<!--[if lt IE 8]>
-	    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-	<![endif]-->
+<body <?php body_class('hide-extras'); ?>>
+	<div id="main-container" class="off-canvas-wrap">
 
-	<div id="container">
+		<div class="inner-wrap">
 
-		<header>
-			<i class="fa fa-heart"></i>
-			<i class="dashicons dashicons-format-standard"></i>
-			<a id="logo" href="<?php echo home_url( '/' ); ?>"> <?php bloginfo( 'name' ); ?></a>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
-		</header>
+			<header class="master_head hide-for-medium-up">
+				<a class="left-off-canvas-toggle" >Menu</a> 
+			</header>
 
-		<nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
+			<header class="master_head full show-for-large-up">
+				<div class="row">
+					<section class="columns large-6">
+						<h1 class="site_title">
+							<a href="<?php echo home_url( '/' ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
+						</h1>
+					</section>
+					<div class="columns large-6">
+						<?php get_template_part('templates/includes/inc', 'sociallist'); ?>
+					</div>
+				</div>
+			</header>
+
+			<div class="master_nav full show-for-large-up">
+				<div class="row">
+					<div class="site_nav column large-9">
+						<?php
+							$defaults = array(
+								'theme_location'  => 'primary',
+								'menu'            => '',
+								'container'       => 'nav',
+								'container_class' => 'menu main_nav',
+								'container_id'    => 'main_navigation',
+								'menu_class'      => '',
+								'menu_id'         => '',
+								'echo'            => true,
+								'fallback_cb'     => 'wp_page_menu',
+							);
+							wp_nav_menu( $defaults );
+						?></div>
+					<div class="column large-3">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="page_title_container full">
+				<div class="row">
+					<section class="columns large-8">
+						<h1 class="page_title">
+							<?php get_template_part('templates/includes/inc', 'pagetitle'); ?>
+						</h1>
+					</section>
+					<section class="columns large-4"></section>
+				</div>
+			</div>

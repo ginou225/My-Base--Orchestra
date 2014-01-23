@@ -1,14 +1,20 @@
 // Font Face
-// @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
+//@include fontface('dashicons', 'assets/scss/partials/fonts', 'dashicons');
+
+// Colors
+$grey-mid           : #ccc;
+$grey-text          : #999;
 
 // Structure
 $pageWidth: 1000px;
+$fullWidth: 100%;
+$margin-bottom-block: 1em;
 
 // Text Selection
 $selectionColor: orange;
 
 // Links
-$linkColor: red;
-$linkHoverColor: blue;
+$linkColor: #369;
+$linkHoverColor: #039;
 
 // Other

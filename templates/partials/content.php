@@ -1,9 +1,6 @@
 <?php
 /**
  * The template used for displaying content
- *
- * @package mattbanks
- * @since mattbanks 2.5
  */
 ?>
 

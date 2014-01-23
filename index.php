@@ -1,25 +1,26 @@
-<?php get_header(); ?>
+<?php get_header(); 
+	global $mb_base;
+	$layout = $mb_base['blog_layout'];
+?>
 
-	<section id="main" role="main">
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'templates/partials/content', get_post_format() ); ?>
+<section id="main" class="page_container" role="main">
+	<div class="content_container row">
 
-		<?php endwhile; ?>
+		<?php if ($layout == "masonry") { 
+			get_template_part('templates/pages/page', 'masonry');
+		}elseif ($layout == "big_image") {
+			get_template_part('templates/pages/page', 'bigimage');
+		} else {
+			get_template_part('templates/pages/page', 'smallimage');
+		} ?>
+		<!-- small image content -->
+		
+	</div>
 
-		<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
-
-		<?php else : ?>
-
-			<article>
-				<h1>Not Found</h1>
-			</article>
-
-		<?php endif; ?>
-
-	</section> <!-- /#main -->
-
-<?php get_sidebar(); ?>
+	<?php get_template_part( 'templates/includes/inc', 'pagination' ); ?>
+</section> 
+<!-- /#main -->
 
 <?php get_footer(); ?>

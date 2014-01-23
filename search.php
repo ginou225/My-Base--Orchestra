@@ -1,41 +1,42 @@
 <?php get_header(); ?>
 
-	<section id="main" role="main">
+<section id="main" class="page_container" role="main">
+	<div class="content_container row">
+		<!-- content -->
+		<div class="content columns large-8">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-			<h1>Search Results</h1>
+				<h1>Search Results</h1>
 
-			<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
+				<ol class="search_results">	
+					<?php while ( have_posts() ) : the_post(); ?>
+					<li>
+						<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+							<div class="entry">
+								<?php the_excerpt(); ?>
+							</div>
 
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						</article>
+					</li>
+					<?php endwhile; ?>
+				</ol>
 
-					<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
+				<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
 
-					<div class="entry">
+			<?php else : ?>
+				<h1>No posts found.</h1>
+			<?php endif; ?>
 
-						<?php the_excerpt(); ?>
+		</div>
+		<!-- /content -->
 
-					</div>
-
-				</article>
-
-			<?php endwhile; ?>
-
-			<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
-
-		<?php else : ?>
-
-			<h1>No posts found.</h1>
-
-		<?php endif; ?>
-
-	</section> <!-- /#main -->
-
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
+	</div>
+</section> 
 
 <?php get_footer(); ?>

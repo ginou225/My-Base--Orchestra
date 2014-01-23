@@ -97,6 +97,8 @@ module.exports = function(grunt) {
                 baseUrl: "./assets",
                 mainConfigFile: "./assets/build.js",
                 out: "./assets/build/optimized.js",
+                preserveLicenseComments: false,
+                include: ['./js/vendor/require.js']
               }
             }
         },
