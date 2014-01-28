@@ -47,6 +47,17 @@ function mb_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	));
+
+	// Shop 
+	register_sidebar(array(
+		'name'          => __( 'Shop', 'mb' ),
+		'id'            => 'shop-widgets',
+		'description'   => __( 'Widgets for Shop.', 'mb' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '',
+		'after_title'   => ''
+	));
 }
 
 /**

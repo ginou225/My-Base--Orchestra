@@ -8,16 +8,14 @@
     			<!-- post head -->
     			<div class="post_head">
       				<!-- thumbnail -->
-                	<figure class="post_thumb post-image background-scale">
+                	<figure class="post_thumb ImageWrapper BackgroundR">
 	                   	<?php the_post_thumbnail(); ?>
-	                    <div class="img-overlay pat-override"></div>
-	                    <ol class="common-style">
-	                        <!-- <li class="white-rounded"><a href=""><i class="fa fa-search"></i></a>
-	                        </li> -->
-	                        <li class="white-rounded">
+	                    <div class="ImageOverlayH"></div>
+	                    <div class="Buttons StyleC">
+	                        <span class="WhiteRounded">
 	                        	<a href="<?php the_permalink(); ?>"><i class="fa fa-link"></i></a>
-	                        </li>
-	                    </ol>
+	                        </span>
+	                    </div>
                   	</figure>
   					<!-- /thumbnail -->
 					
