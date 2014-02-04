@@ -10,6 +10,7 @@
 </head>
 
 <body <?php body_class('hide-extras'); ?>>
+
 	<div id="main-container" class="off-canvas-wrap">
 
 		<div class="inner-wrap">
@@ -31,7 +32,7 @@
 				</div>
 			</header>
 
-			<div class="master_nav full show-for-large-up">
+			<div class="master_nav full show-for-large-up" data-magellan-expedition="fixed">
 				<div class="row">
 					<div class="site_nav column large-9">
 						<?php

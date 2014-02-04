@@ -9,6 +9,8 @@
 				</div>	
 			</footer>
 
+
+
 		<!-- Off Canvas Menu -->
 		<aside class="left-off-canvas-menu">
 		    <!-- whatever you want goes here -->
@@ -24,7 +26,6 @@
   		</div>
 		<!-- /wrap -->
 	</div>
-
 	<?php wp_footer(); ?>
 
 </body>

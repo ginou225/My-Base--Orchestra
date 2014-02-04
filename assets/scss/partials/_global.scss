@@ -254,4 +254,22 @@ table, .full {
     display: block;
 }
 
-//
+#scrollUp {
+  color: #fff;
+  text-decoration: none;
+  background: #555;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 2px;
+  padding: 10px;
+  opacity: .9;
+  right: 1em;
+  bottom: 1em;
+  -webkit-transition: background 200ms linear;
+  -moz-transition: background 200ms linear;
+  transition: background 200ms linear;
+  -webkit-backface-visibility: hidden;
+  &:hover {
+    background: #000;
+  }
+}

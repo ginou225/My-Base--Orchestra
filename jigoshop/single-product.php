@@ -2,9 +2,6 @@
 
 <!-- primary container -->
 <div id="primary_page_content" class="page_content row">
-	
-	<!-- content -->
-	<div id="content_container" class="article_content column twelve">
 
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); 
 	
@@ -18,76 +15,41 @@
 		
 		jigoshop::show_messages(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<!-- entry-header -->
-		<header class="entry-header">
-			<h1 class="entry-title underlined">
-				<?php if($post->post_parent) {
-					$parent_title = get_the_title($post->post_parent); echo $parent_title; the_title('<span class="sub-title">','</span>');
-				} else {
-					the_title();
-				} ?>
-					
-			</h1>
-		</header>
-		<!-- /entry-header -->
-		
-		<!-- product entry -->
-		
-		<div class="row">
-			<section class="column eight">
-				<!-- Product imagery -->
-				<?php if ($_product->is_on_sale()) echo '<span class="onsale">'.__('Sale!', 'jigoshop').'</span>'; ?>
-				<?php jigoshop_get_template( 'product/images.php' ); ?>
-				<!-- /product imagery --> 
-				
-				<!-- summary -->
-				<div class="summary">
-					<!-- tabs -->
-					<?php if (isset($_COOKIE["current_tab"])) $current_tab = $_COOKIE["current_tab"]; else $current_tab = '#tab-description'; ?>
-					<div id="tabs">
-						<dl class="tabs">
-							<dd <?php if ($current_tab=='#tab-description') echo 'class="active"'; ?>><a href="#tab-description"><?php _e('Description', 'jigoshop'); ?></a></dd>
-							<?php if ($_product->has_attributes()) : ?>
-								<dd <?php if ($current_tab=='#tab-attributes') echo 'class="active"'; ?>><a href="#tab-attributes"><?php _e('Additional Information', 'jigoshop'); ?></a></dd>
-							<?php endif; ?>
-							<?php if ( comments_open() ) : ?>
-								<dd <?php if ($current_tab=='#tab-reviews') echo 'class="active"'; ?>><a href="#tab-reviews"><?php _e('Reviews', 'jigoshop'); ?><?php echo comments_number(' (0)', ' (1)', ' (%)'); ?></a></dd>
-							<?php endif; ?>
-						</dl>
-						<ul class="tabs-content">			
-							<li class="active" id="tab-descriptionTab">
-								<?php jigoshop_get_template( 'product/description.php' ); ?>
-							</li>
-							
-						<?php if ($_product->has_attributes()) : ?>
-							<li id="tab-attributesTab">
-								<?php jigoshop_get_template( 'product/attributes.php' ); ?>
-							</li>
-						<?php endif; ?>
-						
-						<?php if ( comments_open() ) : ?>
-							<li id="tab-reviewsTab">
-							<?php comments_template(); ?>
-							</li>
-						<?php endif; ?>
-					</div>
-					<!-- tabs -->
-				</div>
-				<!-- /summary -->
-			</section>
-			<!--/product summary -->
-			<section class="column four">
-				<div class="price_container row">
-					<div class="column three"><p class="">Price</p></div>
-					<div class="column nine"><p class="price"><?php echo $_product->get_price_html(); ?></p></div>
-				</div>
-				
-				
-				<?php if ($post->post_excerpt) echo wpautop(wptexturize($post->post_excerpt)); ?>
+		<!-- product landing -->
+	    <article id="post-<?php the_ID(); ?>" <?php post_class('product_landing row'); ?>>
+	      <section class="product_image_container columns large-4">
+	      	<?php if ($_product->is_on_sale()) echo '<span class="onsale">'.__('Sale!', 'jigoshop').'</span>'; ?>
 
-				<?php
+	      	<!-- featured product image -->
+          	<?php jigoshop_get_template( 'product/images.php' ); ?>
+          	<!-- featured product image -->
+	          
+	        <!-- related products -->
+	        <?php jigoshop_get_template( 'product/related.php' ); ?>
+			<!-- /related -->      
+	      </section>
+	      <section class="columns large-8">
+	        <header class="product_title row">
+	          <div class="columns small-9 large-9">
+	            <h1 class="title">
+	            	<?php if($post->post_parent) {
+						$parent_title = get_the_title($post->post_parent); echo $parent_title; the_title('<span class="sub-title">','</span>');
+					} else {
+						the_title();
+					} ?>
+	            </h1>
+	          </div>
+	          <div class="columns small-3 large-3">
+	            <span class="price"><?php echo $_product->get_price_html(); ?></span>
+	          </div>
+	        </header>
+
+	        <div class="excerpt">
+	          <?php if ($post->post_excerpt) echo wpautop(wptexturize($post->post_excerpt)); ?>
+	        </div>
+
+	        <section class="a2c_block">
+	         	<?php
 					if ( $_product->is_type('simple') ) jigoshop_get_template( 'product/simple/add-to-cart.php' );
 					elseif ( $_product->is_type('downloadable') ) jigoshop_get_template( 'product/downloadable/add-to-cart.php' );
 					elseif ( $_product->is_type('grouped') ) jigoshop_get_template( 'product/grouped/add-to-cart.php' );
@@ -101,19 +63,54 @@
 				</div>
 				
 				<?php do_action('after_product'); ?>
-			
-				<?php jigoshop_get_template( 'product/related.php' ); ?>
-			</section>
-			<!--/product action -->
-		</div>
-			
+	        </section>
 
-		</article>
+	        <hr/>
 
-<?php endwhile; ?>
+	        <div class="product_summary">
+	        	<?php if (isset($_COOKIE["current_tab"])) $current_tab = $_COOKIE["current_tab"]; 
+	        	else $current_tab = '#description'; ?>
+				
+				<dl class="tabs" data-tab>
+					<dd class="active">
+						<a href="#description"><?php _e('Description', 'jigoshop'); ?></a>
+					</dd>
+					<?php if ($_product->has_attributes()) : ?>
+						<dd>
+							<a href="#attributes"><?php _e('Additional Information', 'jigoshop'); ?></a>
+						</dd>
+					<?php endif; ?>
+					<?php if ( comments_open() ) : ?>
+						<dd>
+							<a href="#reviews"><?php _e('Reviews', 'jigoshop'); ?><?php echo comments_number(' (0)', ' (1)', ' (%)'); ?></a>
+						</dd>
+					<?php endif; ?>
+				</dl>
 
-	</div>
-	<!-- /conetent -->
+	        	<div class="tabs-content">
+	        	  <div class="content active" id="description">
+	        	  	<?php jigoshop_get_template( 'product/description.php' ); ?> 	
+	        	  </div>
+
+	        	  <?php if ($_product->has_attributes()) : ?>
+	        	  <div class="content" id="attributes">
+	        	    <?php jigoshop_get_template( 'product/attributes.php' ); ?>
+	        	  </div>
+	        	  <?php endif; ?>
+
+	        	  <?php if ( comments_open() ) : ?>
+	        	  <div class="content" id="reviews">
+	        	    <?php //comments_template(); ?> There is a conflict
+	        	  </div>
+	        	  <?php endif; ?>
+	        	</div>
+
+	        </div>
+	      </section>   
+	    </article>
+	    <!-- /product landing -->
+
+	<?php endwhile; ?>
 </div>
 <!-- /primary container -->
 

@@ -30,6 +30,10 @@
 		} elseif ( is_post_type_archive() ) {
 		    post_type_archive_title();
 
+		} elseif (is_single() ) {
+			$parent_title = get_the_title($post->post_parent);
+			echo $parent_title;
+
 		} elseif (is_home() ) {
 			echo 'Blog';
 
