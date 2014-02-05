@@ -1,8 +1,8 @@
 <!-- masonry content -->
 <div class="brick_container">
-<div id="masonryContainer" class="content columns large-12">
+<div id="masonryContainer" class="content">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="masonry-brick">
+		<div class="masonry-brick columns large-4">
  			<!-- blog module -->
  			<article id="post-<?php the_ID(); ?>" <?php post_class('post_blog') ?> >
     			<!-- post head -->
