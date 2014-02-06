@@ -50,6 +50,7 @@ function mb_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add Image Sizes
+	add_image_size( 'post-image-small', 300, 300 ); // Permalink thumb
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 
 	// Enable Custom Headers
@@ -103,9 +104,6 @@ function mb_setup() {
 
 	/* Add media support of post formats */
 	//add_theme_support( 'hybrid-core-media-grabber' );
-
-	// Image support
-	add_image_size( 'post-image-small', 300, 300 ); // Permalink thumb
 
 
 	/****************************************

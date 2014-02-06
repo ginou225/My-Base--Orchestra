@@ -21,6 +21,12 @@ require_once( get_template_directory() . '/lib/meta/custom-meta-boxes.php' ); //
 require_once( get_template_directory() . '/lib/post_format_ui/cf-post-formats.php' ); //Wp Post Format
 
 /****************************************
+Event Organiser integration
+*****************************************/
+
+require_once( get_template_directory() . '/lib/theme-eo.php' );
+
+/****************************************
 Redux Framework Theme Options
 *****************************************/
 

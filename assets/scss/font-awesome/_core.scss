@@ -2,7 +2,7 @@
 // -------------------------
 
 .#{$fa-css-prefix} {
-  display: inline-block;
+  display: inline-block !important;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;

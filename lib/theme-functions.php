@@ -219,6 +219,10 @@ function manage_jigoshop_styles() {
  * Remove Query Strings From Static Resources
  */
 function mb_remove_script_version($src){
+	if ( FALSE === strpos($src, 'http://ajax.googleapis.com/') )
+	{
+	return $src;
+	}
 	$parts = explode('?', $src);
 	return $parts[0];
 }

@@ -7207,7 +7207,7 @@ th.hide-for-touch {
 }
 
 .fa {
-  display: inline-block;
+  display: inline-block !important;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -9506,6 +9506,64 @@ blockquote {
 
 .related_products dd {
   margin-bottom: 0.5em !important;
+}
+
+/* Events */
+.clearing {
+  overflow: hidden;
+}
+
+.event_header {
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+.event_data * {
+  font-size: 0.8rem;
+}
+
+.event_landing .content {
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  -o-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+.event_landing .event_block > a {
+  background: none;
+  padding: 0;
+  -webkit-transition: 0.2s all ease-in;
+  -moz-transition: 0.2s all ease-in;
+  -o-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+.event_landing .day {
+  line-height: 0.9em;
+}
+
+.block_date_container {
+  padding: 10px;
+  position: absolute;
+}
+
+.block_date span {
+  display: block;
+}
+.block_date .day {
+  font-size: 3rem;
+}
+.block_date .month {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.event_title {
+  padding: 10px 0 10px 80px;
+}
+
+#map_canvas {
+  background-color: #cccccc;
+  width: 100%;
+  height: 300px;
 }
 
 /* SHARING */
