@@ -9106,61 +9106,76 @@ a:hover, a:visited:hover {
 }
 
 /* Drop-down styles. */
-div.menu ul, nav.menu ul {
+.menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 1.0;
   float: left;
 }
-
-div.menu ul ul, nav.menu ul ul {
+.menu ul ul {
   position: absolute;
   top: -999em;
   width: 10em;
 }
-
-div.menu ul ul li, nav.menu ul ul li {
+.menu ul ul li {
   width: 100%;
 }
-
-div.menu li:hover, nav.menu li:hover {
-  visibility: inherit;
-}
-
-div.menu li, nav.menu li {
+.menu li {
   float: left;
   position: relative;
 }
-
-div.menu a, nav.menu a {
-  display: block;
-  position: relative;
+.menu li:hover, .menu li.sfHover {
+  visibility: inherit;
 }
-
-div.menu li:hover ul, div.menu li.sfHover ul, nav.menu li:hover ul, nav.menu li.sfHover ul {
+.menu li:hover ul, .menu li.sfHover ul {
   position: absolute;
   left: 0;
   top: 100%;
   z-index: 99;
 }
-
-div.menu li:hover li ul, div.menu li.sfHover li ul, nav.menu li:hover li ul, nav.menu li.sfHover li ul {
+.menu li:hover li ul, .menu li.sfHover li ul {
   top: -999em;
 }
-
-div.menu li li:hover ul, div.menu li li.sfHover ul, nav.menu li li:hover ul, nav.menu li li.sfHover ul {
+.menu li li:hover ul, .menu li li.sfHover ul {
   left: 10em;
   top: 0;
 }
-
-div.menu li li:hover li ul, div.menu li li.sfHover li ul, nav.menu li li:hover li ul, nav.menu li li.sfHover li ul {
+.menu li li:hover li ul, .menu li li.sfHover li ul {
   top: -999em;
 }
-
-div.menu li li li:hover ul, div.menu li li li.sfHover ul, nav.menu li li li:hover ul, nav.menu li li li.sfHover ul {
+.menu li li li:hover ul, .menu li li li.sfHover ul {
   left: 10em;
   top: 0;
+}
+.menu a {
+  display: block;
+  position: relative;
+}
+
+.mobile_nav {
+  margin: 0;
+  padding: 0;
+}
+.mobile_nav ul, .mobile_nav li {
+  list-style: none;
+  margin: 0;
+}
+.mobile_nav .sub-menu {
+  background: #555;
+}
+.mobile_nav .sub-menu a {
+  font-style: italic;
+}
+.mobile_nav a {
+  color: #fff;
+  border-bottom: 1px solid #666;
+  padding: 8px 10px;
+  display: block;
+}
+.mobile_nav a:hover {
+  color: #fff;
+  background-color: #666;
 }
 
 .searchform input {
@@ -9467,6 +9482,7 @@ blockquote {
 /* Products */
 .post_product {
   border: 1px solid #ccc;
+  position: relative;
 }
 .post_product .title {
   padding: 5px;

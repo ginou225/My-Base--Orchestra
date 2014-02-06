@@ -327,12 +327,11 @@ blockquote {
 
 .post_product {
 	border: 1px solid #ccc;
-
+	position: relative;
 	.title {
 		padding: 5px;
 		height: 70px;
 	}
-
 	.product_price {
 		color: #fff;
 		font-weight: bold;

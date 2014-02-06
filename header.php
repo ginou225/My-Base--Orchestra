@@ -48,7 +48,8 @@
 								'fallback_cb'     => 'wp_page_menu',
 							);
 							wp_nav_menu( $defaults );
-						?></div>
+						?>
+					</div>
 					<div class="column large-3">
 						<?php get_search_form(); ?>
 					</div>

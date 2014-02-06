@@ -38,27 +38,6 @@
 
 	<!-- content -->
 	<div id="content_container" class="product_content">
-
-		<div class="row">
-			<section class="large-6 columns">
-				<?php
-					$instance['title'] = '';
-					$instance['dropdown'] = '1';
-					the_widget('Jigoshop_Widget_Product_Categories', $instance );
-				?>	
-			</section>
-			<section class="large-6 columns">
-				<?php 
-					$instance['title'] = ';';
-					$args = '';
-					the_widget('Jigoshop_Widget_Price_Filter',$instance, $args ); 
-				?>	
-			</section>
-		</div>
-
-		
-		
-
 		<?php 
 			jigoshop_get_template_part( 'loop', 'shop' ); 
 

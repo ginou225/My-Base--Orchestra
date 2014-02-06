@@ -158,7 +158,9 @@ Frontend
 function mb_scripts() {
 	// CSS first
 	wp_enqueue_style( 'mb_style' );
-	//wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome.css' );
+	if ( is_jigoshop() && is_cart() && is_checkout() ) {
+		wp_enqueue_style( 'jigoshop', get_template_directory_uri() . '/jigoshop.css' );
+	}
 
 	// JavaScript
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -188,6 +190,28 @@ function mb_scripts() {
 			wp_enqueue_script('optimized', get_template_directory_uri() . '/assets/build/optimized.js', array('jquery'), NULL, true );
 		}
 		
+	}
+}
+
+/**
+ * Optimize Jigoshop Scripts
+ * Remove Jigoshop Generator tag, styles, and scripts from non Jigoshop pages.
+ */
+add_action( 'wp_enqueue_scripts', 'manage_jigoshop_styles', 99 );
+ 
+function manage_jigoshop_styles() {
+
+	//first check that jigoshop exists to prevent fatal errors
+	if ( function_exists( 'is_jigoshop' ) ) {
+		//dequeue scripts and styles
+		if ( ! is_jigoshop() && ! is_cart() && ! is_checkout() ) {
+			wp_dequeue_script( 'jigoshop_global' );
+			wp_dequeue_script( 'prettyphoto' );
+			wp_dequeue_script( 'jigoshop_blockui' );
+			wp_dequeue_script( 'jigoshop-cart' );
+			wp_dequeue_script( 'jigoshop-checkout' );
+			wp_dequeue_script( 'jigoshop-single-product' );
+		}
 	}
 }
 
