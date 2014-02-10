@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+	global $mb_base;
+?>
 
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">

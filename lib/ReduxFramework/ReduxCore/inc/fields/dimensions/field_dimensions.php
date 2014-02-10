@@ -11,7 +11,7 @@ class ReduxFramework_dimensions extends ReduxFramework {
      */
     function __construct( $field = array(), $value ='', $parent ) {
     
-        parent::__construct( $parent->sections, $parent->args );
+        //parent::__construct( $parent->sections, $parent->args );
         $this->parent = $parent;
         $this->field = $field;
         $this->value = $value;
@@ -137,7 +137,7 @@ class ReduxFramework_dimensions extends ReduxFramework {
             echo '<div class="field-dimensions-input input-prepend">';
             echo '<span class="add-on"><i class="el-icon-resize-horizontal icon-large"></i></span>';
             echo '<input type="text" class="redux-dimensions-input redux-dimensions-width mini' . $this->field['class'] . '" placeholder="' . __('Width', 'redux-framework') . '" rel="' . $this->field['id'] . '-width" value="' . filter_var($this->value['width'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) . '">';
-            echo '<input data-id="' . $this->field['id'] . '" type="hidden" id="' . $this->field['id'] . '-width" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][width]" value="' . $this->value['width'] . '"></div>';
+            echo '<input data-id="' . $this->field['id'] . '" type="hidden" id="' . $this->field['id'] . '-width" name="' . $this->field['name'] . '[width]" value="' . $this->value['width'] . '"></div>';
         endif;
 
         /**
@@ -153,7 +153,7 @@ class ReduxFramework_dimensions extends ReduxFramework {
             echo '<div class="field-dimensions-input input-prepend">';
             echo '<span class="add-on"><i class="el-icon-resize-vertical icon-large"></i></span>';
             echo '<input type="text" class="redux-dimensions-input redux-dimensions-height mini' . $this->field['class'] . '" placeholder="' . __('height', 'redux-framework') . '" rel="' . $this->field['id'] . '-height" value="' . filter_var($this->value['height'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) . '">';
-            echo '<input data-id="' . $this->field['id'] . '" type="hidden" id="' . $this->field['id'] . '-height" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][height]" value="' . $this->value['height'] . '"></div>';
+            echo '<input data-id="' . $this->field['id'] . '" type="hidden" id="' . $this->field['id'] . '-height" name="' . $this->field['name'] . '[height]" value="' . $this->value['height'] . '"></div>';
         endif;
 
         /**
@@ -166,7 +166,7 @@ class ReduxFramework_dimensions extends ReduxFramework {
          
         if (isset($this->field['units']) && $this->field['units'] !== false){
             echo '<div class="select_wrapper dimensions-units" original-title="' . __('Units', 'redux-framework') . '">';
-            echo '<select data-id="' . $this->field['id'] . '" data-placeholder="' . __('Units', 'redux-framework') . '" class="redux-dimensions redux-dimensions-units select' . $this->field['class'] . '" original-title="' . __('Units', 'redux-framework') . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][units]">';
+            echo '<select data-id="' . $this->field['id'] . '" data-placeholder="' . __('Units', 'redux-framework') . '" class="redux-dimensions redux-dimensions-units select' . $this->field['class'] . '" original-title="' . __('Units', 'redux-framework') . '" name="' . $this->field['name'] . '[units]">';
 
             //  Extended units, show 'em all
             if ( $this->field['units_extended'] ) {
@@ -205,19 +205,22 @@ class ReduxFramework_dimensions extends ReduxFramework {
         wp_enqueue_style('select2-css');
 
         wp_enqueue_script(
-                'redux-field-dimensions-js', ReduxFramework::$_url . 'inc/fields/dimensions/field_dimensions.js', array('jquery', 'select2-js', 'jquery-numeric'), time(), true
+            'redux-field-dimensions-js', 
+            ReduxFramework::$_url . 'inc/fields/dimensions/field_dimensions.js', 
+            array('jquery'), 
+            time(), 
+            true
         );
 
         wp_enqueue_style(
-                'redux-field-dimensions-css', ReduxFramework::$_url . 'inc/fields/dimensions/field_dimensions.css', time(), true
+            'redux-field-dimensions-css', 
+            ReduxFramework::$_url . 'inc/fields/dimensions/field_dimensions.css', 
+            time(), 
+            true
         );
     }
 
     public function output() {
-
-        if ( !isset($this->field['output']) || empty( $this->field['output'] ) ) {
-            return;
-        }
 
         // if field units has a value and IS an array, then evaluate as needed.
         if (isset($this->field['units']) && !is_array($this->field['units'])) {
@@ -256,16 +259,21 @@ class ReduxFramework_dimensions extends ReduxFramework {
 
         $style = "";
 
-        $keys = implode(",", $this->field['output']);
-        $style .= $keys."{";
-            foreach($cleanValue as $key=>$value) {
-                if( $value ) {
-                    $style .= $key . ':' . $value . $units . ';';
-                }
-            }          
-        $style .= '}';
-        if ( !empty($style ) ) {
-            $this->parent->outputCSS .= $style;  
+        foreach($cleanValue as $key=>$value) {
+            if( $value ) {
+                $style .= $key . ':' . $value . $units . ';';
+            }
+        }          
+        if ( !empty( $style ) ) {
+            if ( !empty( $this->field['output'] ) && is_array( $this->field['output'] ) ) {
+                $keys = implode(",", $this->field['output']);
+                $this->parent->outputCSS .= $keys . "{" . $style . '}';
+            }
+
+            if ( !empty( $this->field['compiler'] ) && is_array( $this->field['compiler'] ) ) {
+                $keys = implode(",", $this->field['compiler']);
+                $this->parent->compilerCSS .= $keys . "{" . $style . '}';
+            }               
         }
         
     }

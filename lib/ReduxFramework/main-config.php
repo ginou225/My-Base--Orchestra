@@ -1,20 +1,7 @@
 <?php
 if (!function_exists('redux_init')) :
 	function redux_init() {
-	/**
-		ReduxFramework Sample Config File
-		For full documentation, please visit: https://github.com/ReduxFramework/ReduxFramework/wiki
-	**/
 
-
-	/**
-	 
-		Most of your editing will be done in this section.
-
-		Here you can override default values, uncomment args and change their values.
-		No $args are required, but they can be overridden if needed.
-		
-	**/
 	$args = array();
 
 
@@ -174,15 +161,15 @@ if (!function_exists('redux_init')) :
 
 	// Set a custom title for the options page.
 	// Default: Options
-	$args['menu_title'] = __('Options', 'redux-framework-demo');
+	$args['menu_title'] = __('Theme Options', 'redux-framework-demo');
 
 	// Set a custom page title for the options page.
 	// Default: Options
-	$args['page_title'] = __('Options', 'redux-framework-demo');
+	$args['page_title'] = __('Theme Options', 'redux-framework-demo');
 
 	// Set a custom page slug for options page (wp-admin/themes.php?page=***).
 	// Default: redux_options
-	$args['page_slug'] = 'redux_options';
+	$args['page_slug'] = 'theme_options';
 
 	$args['default_show'] = true;
 	$args['default_mark'] = '*';
@@ -193,12 +180,12 @@ if (!function_exists('redux_init')) :
 
 	// Set the menu type. Set to "menu" for a top level menu, or "submenu" to add below an existing item.
 	// Default: menu
-	//$args['page_type'] = 'submenu';
+	$args['page_type'] = 'submenu';
 
 	// Set the parent menu.
 	// Default: themes.php
 	// A list of available parent menus is available at http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
-	//$args['page_parent'] = 'options-general.php';
+	$args['page_parent'] = 'themes.php';
 
 	// Set a custom page location. This allows you to place your menu where you want in the menu order.
 	// Must be unique or it will override other items!
@@ -280,24 +267,132 @@ if (!function_exists('redux_init')) :
 	**********************************************************/
 	$sections[] = array(
 		'icon' => 'el-icon-cogs',
-		'desc' => __('General layout settings', 'redux-framework-demo'),
+		'desc' => __('<p class="description">Welcome to your themes options panel!.</p>', 'redux-framework-demo'),
 		'title' => __('General Settings', 'redux-framework-demo'),
 		'fields' => array(	
 			array(
-				'id'=>'blog_layout',
-				'type' => 'select',
-				'title' => __('Blog Layout', 'redux-framework-demo'), 
-				'subtitle' => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
-				'options' => array('masonry'=>'Masonry', 'big_image'=>'Big Image','small_image'=>'Small Image'),
-				'default' => 'big_image',
-				),					
+				'id'=>'favicon',
+				'type' => 'media',
+				'url'      => true,
+				'title' => __('Favicon Upload', 'redux-framework-demo'), 
+				'desc' => __('Upload from Desktop or Media Section or you can make one <a href="http://favicon-generator.org/" target="_blank">HERE</a>', 'redux-framework-demo'),
+				'default' => '',
 			),
-		);
+			array(
+				'id'=>'email_address',
+				'type' => 'text',
+				'title' => __('Primary Email Address', 'redux-framework-demo'), 
+				'desc' => __('Enter Email Address', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => 'anyone@anywhere.com',
+				'validate' => 'email',
+        		'msg' => 'Enter a valid email address',
+			),
+			array(
+				'id'=>'phone_number',
+				'type' => 'text',
+				'title' => __('Primary Phone Number', 'redux-framework-demo'), 
+				'desc' => __('Enter Phone Number', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => '1-800-123-4567',
+				'validate' => 'email',
+        		'msg' => 'Enter a valid email address',
+			),
+			array(
+				'id'=>'street_address',
+				'type' => 'text',
+				'title' => __('Street Address', 'redux-framework-demo'), 
+				'desc' => __('Enter Street Address is applicable', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => '123 Random Street',
+			),
+			array(
+				'id'=>'us_state',
+				'type' => 'select',
+				'title' => __('State', 'redux-framework-demo'), 
+				'subtitle' => __('Select your state.', 'redux-framework-demo'),
+				'options' => array(
+					'AL' => 'Alabama',
+					'AK' => 'Alaska',
+					'AZ' => 'Arizona',
+					'AR' => 'Arkansas',
+					'CA' => 'California',
+					'CO' => 'Colorado',
+					'CT' => 'Connecticut',
+					'DE' => 'Delaware',
+					'DC' => 'District Of Columbia',
+					'FL' => 'Florida',
+					'GA' => 'Georgia',
+					'HI' => 'Hawaii',
+					'ID' => 'Idaho',
+					'IL' => 'Illinois',
+					'IN' => 'Indiana',
+					'IA' => 'Iowa',
+					'KS' => 'Kansas',
+					'KY' => 'Kentucky',
+					'LA' => 'Louisiana',
+					'ME' => 'Maine',
+					'MD' => 'Maryland',
+					'MA' => 'Massachusetts',
+					'MI' => 'Michigan',
+					'MN' => 'Minnesota',
+					'MS' => 'Mississippi',
+					'MO' => 'Missouri',
+					'MT' => 'Montana',
+					'NE' => 'Nebraska',
+					'NV' => 'Nevada',
+					'NH' => 'New Hampshire',
+					'NJ' => 'New Jersey',
+					'NM' => 'New Mexico',
+					'NY' => 'New York',
+					'NC' => 'North Carolina',
+					'ND' => 'North Dakota',
+					'OH' => 'Ohio',
+					'OK' => 'Oklahoma',
+					'OR' => 'Oregon',
+					'PA' => 'Pennsylvania',
+					'RI' => 'Rhode Island',
+					'SC' => 'South Carolina',
+					'SD' => 'South Dakota',
+					'TN' => 'Tennessee',
+					'TX' => 'Texas',
+					'UT' => 'Utah',
+					'VT' => 'Vermont',
+					'VA' => 'Virginia',
+					'WA' => 'Washington',
+					'WV' => 'West Virginia',
+					'WI' => 'Wisconsin',
+					'WY' => 'Wyoming'
+					),
+				'default' => 'MA',
+			),	
+			array(
+				'id'=>'zip_code',
+				'type' => 'text',
+				'title' => __('Zip Code', 'redux-framework-demo'), 
+				'desc' => __('Enter Proper Zip Code', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => '12345',
+			),
+			array(
+				'id'=>'newsletter',
+				'type' => 'text',
+				'title' => __('Newsletter Code', 'redux-framework-demo'), 
+				'desc' => __('Enter Newsletter ID', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => '123456789',
+			),
+			array(
+                'id' => 'google_analytics',
+                'type' => 'textarea',
+                'title' => __('Google Analytics', 'redux-framework-demo'), 
+                'sub_desc' => __('Please enter in your google analytics tracking code here.', 'redux-framework-demo'),
+                'desc' => __('', 'redux-framework-demo')
+            ),					
 
-	/*** divide ***/
-	$sections[] = array(
-		'type' => 'divide',
+		),
 	);
+
 
 	/*********************************************************
 		* Social Settings *
@@ -399,11 +494,6 @@ if (!function_exists('redux_init')) :
 			),
 		);
 
-	/*** divide ***/
-	$sections[] = array(
-		'type' => 'divide',
-	);
-
 	/*********************************************************
 		* Home Settings *
 	**********************************************************/
@@ -412,25 +502,36 @@ if (!function_exists('redux_init')) :
 		'icon' => 'el-icon-home',
 	    //'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
 		'fields' => array(				
-	      	//Slides               
-			array(
-				'id'=>'slides',
-				'type' => 'slides',
-				'title' => __('Slides Options', 'redux-framework-demo'),
-				'subtitle'=> __('Unlimited slides with drag and drop sortings.', 'redux-framework-demo'),
-				'options'=>array(
-					'flash' => 'flash',
-				),
-				'placeholder' => array(
-					'title'=>"This is the title",
-					'description'=>"Description here",
-					'url'=>"Link",
-					'select'=>"Select an Animation",
-				),
-				// 'select2' => array() // Select 2 options
-				'desc' => __('This field will store all slides values into a multidimensional array to use into a foreach loop.', 'redux-framework-demo')
-			),	
+	      		
 		),
+	);
+
+	/*********************************************************
+		* Layout Settings *
+	**********************************************************/
+	$sections[] = array(
+		'icon' => 'el-icon-cogs',
+		'desc' => __('Layout Settings', 'redux-framework-demo'),
+		'title' => __('Layout Settings', 'redux-framework-demo'),
+		'fields' => array(	
+			array(
+				'id'=>'blog_layout',
+				'type' => 'select',
+				'title' => __('Blog Layout', 'redux-framework-demo'), 
+				'subtitle' => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
+				'options' => array(
+					'masonry'=>'Masonry', 
+					'big_image'=>'Big Image',
+					'small_image'=>'Small Image'
+					),
+				'default' => 'big_image',
+				),					
+			),
+		);
+
+	/*** divide ***/
+	$sections[] = array(
+		'type' => 'divide',
 	);
 					
 	/*********************************************************

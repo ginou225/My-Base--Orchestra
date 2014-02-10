@@ -30,6 +30,9 @@
 		} elseif ( is_post_type_archive() ) {
 		    post_type_archive_title();
 
+		} elseif ( post_type_exists('event') ) {
+			_e('Events','mb_base');
+
 		} elseif (is_single() ) {
 			$parent_title = get_the_title($post->post_parent);
 			echo $parent_title;
