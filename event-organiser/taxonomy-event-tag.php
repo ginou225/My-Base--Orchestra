@@ -5,9 +5,7 @@ get_header(); ?>
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
 		<div id="main_event_tags" class="content columns large-8">
-			<header class="title">  
-	       		<h2><?php printf( __( 'Event Tag Archives: %s', 'mb_base' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h2>
-			</header>
+
 			<!-- If the category has a description display it-->
 			<?php
 				$category_description = category_description();

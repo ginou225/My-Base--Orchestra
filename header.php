@@ -51,7 +51,7 @@
 						?>
 					</div>
 					<div class="column large-3">
-						<?php get_search_form(); ?>
+						<?php //get_search_form(); ?>
 					</div>
 				</div>
 			</div>

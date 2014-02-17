@@ -8933,103 +8933,6 @@ th.hide-for-touch {
   content: "\f196";
 }
 
-@font-face {
-  font-family: "dashicons";
-  font-style: normal;
-  font-weight: normal;
-  src: url("assets/scss/partials/fonts/dashicons.eot");
-  src: url("assets/scss/partials/fonts/dashicons.eot#iefix") format("embedded-opentype"), url("assets/scss/partials/fonts/dashicons.woff") format("woff"), url("assets/scss/partials/fonts/dashicons.ttf") format("truetype"), url("assets/scss/partials/fonts/dashicons.svg#dashicons") format("svg");
-}
-
-.dashicons {
-  font-family: "dashicons";
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  text-align: center;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  vertical-align: top;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  -moz-transition: color .1s ease-in 0;
-  -webkit-transition: color .1s ease-in 0;
-}
-
-/* Both Admin Menu and Post Formats */
-.dashicons-admin-links:before,
-.dashicons-format-links:before {
-  content: "\f103";
-}
-
-.dashicons-admin-post:before,
-.dashicons-format-standard:before {
-  content: "\f109";
-}
-
-/* Post Format Icons */
-.dashicons-edit:before {
-  content: "\f464";
-}
-
-.dashicons-format-image:before {
-  content: "\f128";
-}
-
-.dashicons-format-gallery:before {
-  content: "\f161";
-}
-
-.dashicons-format-audio:before {
-  content: "\f127";
-}
-
-.dashicons-format-video:before {
-  content: "\f126";
-}
-
-.dashicons-format-chat:before {
-  content: "\f125";
-}
-
-.dashicons-format-status:before {
-  content: "\f130";
-}
-
-.dashicons-format-aside:before {
-  content: "\f123";
-}
-
-.dashicons-format-quote:before {
-  content: "\f122";
-}
-
-.dashicons-camera:before {
-  content: "\f306";
-}
-
-.dashicons-images-alt:before {
-  content: "\f232";
-}
-
-.dashicons-images-alt2:before {
-  content: "\f233";
-}
-
-.dashicons-video-alt:before {
-  content: "\f234";
-}
-
-.dashicons-video-alt2:before {
-  content: "\f235";
-}
-
-.dashicons-video-alt3:before {
-  content: "\f236";
-}
-
 h1 {
   font-size: 1.8em;
 }
@@ -9227,6 +9130,18 @@ img.wp-smiley {
 }
 .post_blog .post_head {
   text-align: center;
+}
+.post_blog .post_excerpt {
+  padding: 0 20px 10px;
+}
+.post_blog.standard .format_icon {
+  margin-top: 1em;
+}
+.post_blog.quote {
+  padding: 20px 0;
+}
+.post_blog.quote p {
+  margin-bottom: 0;
 }
 .post_blog .post_thumb {
   overflow: hidden;

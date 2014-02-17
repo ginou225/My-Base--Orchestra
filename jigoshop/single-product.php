@@ -1,4 +1,4 @@
-<?php get_header('shop'); ?>
+<?php get_header(); ?>
 
 <!-- primary container -->
 <div id="primary_page_content" class="page_content row">
@@ -16,7 +16,7 @@
 		jigoshop::show_messages(); ?>
 
 		<!-- product landing -->
-	    <article id="post-<?php the_ID(); ?>" <?php post_class('product_landing row'); ?>>
+	    <article id="post-<?php the_ID(); ?>" <?php post_class('product_landing'); ?>>
 	      <section class="product_image_container columns large-4">
 	      	<?php if ($_product->is_on_sale()) echo '<span class="onsale">'.__('Sale!', 'jigoshop').'</span>'; ?>
 
@@ -32,11 +32,7 @@
 	        <header class="product_title row">
 	          <div class="columns small-9 large-9">
 	            <h1 class="title">
-	            	<?php if($post->post_parent) {
-						$parent_title = get_the_title($post->post_parent); echo $parent_title; the_title('<span class="sub-title">','</span>');
-					} else {
-						the_title();
-					} ?>
+	            	<?php echo jigoshop_template_single_title($post, $_product); ?>
 	            </h1>
 	          </div>
 	          <div class="columns small-3 large-3">

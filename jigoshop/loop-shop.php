@@ -38,7 +38,7 @@ if (have_posts()) : while (have_posts()) : the_post(); $_product = new jigoshop_
 
 ?>
 
-<div class="large-4 columns <?php if ($loop%$columns==0) echo 'last end'; if (($loop-1)%$columns==0) echo 'first'; ?>">
+<div class="large-4 columns end <?php if ($loop%$columns==0) echo 'last'; if (($loop-1)%$columns==0) echo 'first'; ?>">
 <!-- product module -->
 	<article id="post-<?php the_ID(); ?>" class="post_product">
 		<div class="post_head">

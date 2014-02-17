@@ -27,11 +27,28 @@
 		} elseif ( is_year() ) {
 			printf( __( 'Yearly Archives: %s', 'mb' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
+		// Events	
+		} elseif ( eo_is_event_archive() || is_singular('event')  ) {
+			_e('Events','mb_base');
+
+		} elseif ( is_tax('event-venue') ) {
+			echo _e('Events at','mb_base'), ": <span class=\"sub_title\">" .single_cat_title( '', false ) . "</span>";
+
+		} elseif ( eo_is_event_taxonomy() ) {
+			echo _e('Events','mb_base'), ": <span class=\"sub_title\">" .single_cat_title( '', false ) . "</span>";
+
+		
+		// Jigoshop
+		} elseif (function_exists( 'jigoshop_init' ) || is_singular('product') ) {
+			if ( is_tax('product_cat') && is_tax('product_tag') ) {
+					$term =	$wp_query->queried_object;
+					echo _e('Products','mb_base'), ": <span class=\"sub_title\">" .$term->name. "</span>";
+				} else {
+					echo _e('Products','mb_base');
+				}
+
 		} elseif ( is_post_type_archive() ) {
 		    post_type_archive_title();
-
-		} elseif ( post_type_exists('event') ) {
-			_e('Events','mb_base');
 
 		} elseif (is_single() ) {
 			$parent_title = get_the_title($post->post_parent);

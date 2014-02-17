@@ -6,10 +6,6 @@ get_header(); ?>
 	<div class="content_container row">
 		<div id="main_venue_events" class="content columns large-8">
 			<?php $venue_id = get_queried_object_id(); ?>
-       	
-	       	<header class="title">  
-	       		<h2><?php printf( __( 'Events at: %s', 'sigmatheme' ), '<span>' .eo_get_venue_name($venue_id). '</span>' );?></h2>
-			</header>
 
 			<!-- Display the venue map. If you specify a class, ensure that class has height/width dimensions-->
 			<?php echo eo_get_venue_map( $venue_id, array('width'=>"100%") ); ?>

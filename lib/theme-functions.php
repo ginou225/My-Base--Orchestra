@@ -158,8 +158,15 @@ Frontend
 function mb_scripts() {
 	// CSS first
 	wp_enqueue_style( 'mb_style' );
+	
+	//Jigoshop
 	if ( is_jigoshop() && is_cart() && is_checkout() ) {
 		wp_enqueue_style( 'jigoshop', get_template_directory_uri() . '/jigoshop.css' );
+	}
+
+	//Dashicons
+	if( !is_admin() ) {
+		wp_enqueue_style( 'mb-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
 	}
 
 	// JavaScript

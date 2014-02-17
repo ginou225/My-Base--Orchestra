@@ -16,7 +16,7 @@
  */
 ?>
 
-<?php get_header('shop'); ?>
+<?php get_header(); ?>
 
 <!-- primary container -->
 <div id="primary_page_content" class="page_content">
@@ -51,4 +51,4 @@
 </div>
 <!-- /primary container -->
 
-<?php get_footer('shop'); ?>
+<?php get_footer(); ?>
