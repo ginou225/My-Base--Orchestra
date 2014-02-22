@@ -8,7 +8,7 @@
 			<!-- post -->
             <div class="post_head">
                 <!-- thumbnail -->
-                <figure class="post_thumb post-image background-scale clip th">
+                <figure class="post_thumb post-image ImageWrapper BackgroundS clip th">
 	                <?php 
 						if ( has_post_thumbnail() ) {
 						  get_the_image( array(
@@ -17,12 +17,12 @@
 						  );
 						} 
 					?>
-	                <div class="img-overlay pat-override"></div>
-	                <ol class="common-style pat-override">
-	                	<li class="white-rounded">
+	                <div class="ImageOverlayH"></div>
+			        <div class="Buttons StyleC">
+	                	<span class="WhiteRounded">
 	                		<a href="<?php the_permalink(); ?>"><i class="fa fa-link fa-lg"></i></a>
-	                	</li>
-	                </ol>
+	                	</span>
+	                </div>
                 </figure>
                 <!-- /thumbnail -->
             </div>

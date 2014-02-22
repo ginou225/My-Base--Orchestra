@@ -22,7 +22,9 @@
 		
 		<!-- format icon -->
 	    <div class="format_icon img-circle">
-	       <?php get_template_part( 'templates/includes/inc', 'post-format-icon' ); ?>
+	    	<span class="format">
+		        <?php get_template_part( 'templates/includes/inc', 'post-format-icon' ); ?>
+		    </span>
 	    </div>
 	    <!-- /format icon -->
 	</div>

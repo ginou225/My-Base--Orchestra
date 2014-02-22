@@ -1,5 +1,9 @@
 <h1 class="page_header_main">
 	<?php
+		global $mb_base;
+		$blog_title = $mb_base['blog_section_title'];
+
+
 		if ( is_category() ) {
 			printf( __( 'Category: %s', 'mb' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
@@ -38,8 +42,8 @@
 			echo _e('Events','mb_base'), ": <span class=\"sub_title\">" .single_cat_title( '', false ) . "</span>";
 
 		
-		// Jigoshop
-		} elseif (function_exists( 'jigoshop_init' ) || is_singular('product') ) {
+		// Jigoshop function_exists( 'jigoshop_init' )
+		} elseif ( is_post_type_archive('product') || is_singular('product') ) {
 			if ( is_tax('product_cat') && is_tax('product_tag') ) {
 					$term =	$wp_query->queried_object;
 					echo _e('Products','mb_base'), ": <span class=\"sub_title\">" .$term->name. "</span>";
@@ -55,8 +59,11 @@
 			echo $parent_title;
 
 		} elseif (is_home() ) {
-			echo 'Blog';
-
+			if ( $blog_title ) {
+				echo $blog_title;
+			} else {
+				echo "Blog";
+			}		
 		} else {
 			//_e( 'Archives', 'mb' );
 			the_title();

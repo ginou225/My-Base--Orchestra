@@ -36,10 +36,51 @@ code, tt { }
 
 /* Block and Masonry blocks */
 
+#masonryContainer { 
+	width: 0 auto;
+}
+
+.format_icon {
+	color: #fff;
+	background-color: #555;
+
+	.format {
+		width: 40px;
+		height: 40px;
+	}
+
+	.dashicons {
+		font-size: 40px;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+
+
 .post_blog {
 	background-color: #fff;
 	border: 1px solid #ccc;
 	position: relative;
+	
+	.format_icon {
+		border: 8px solid rgba(0, 0, 0, 0.2);
+		background-clip: padding-box;
+		margin: -2.5em auto 0;
+		width: 80px;
+		height: 80px;
+		position: relative;
+		z-index: 10;
+
+		.format {
+			margin-left: -20px;
+			margin-top: -20px;
+			position: absolute;
+			left: 50%;
+			top: 51%; 
+		}
+	}
+
 
 	.post_head {
 		text-align: center;
@@ -94,33 +135,6 @@ code, tt { }
 	background-color: #eee;
 	border-top: 1px solid #ccc;
 	padding: 10px 5px;
-}
-
-#masonryContainer { 
-	width: 0 auto;
-}
-
-.format_icon {
-	color: #fff;
-	background-color: #555;
-	border: 8px solid rgba(0, 0, 0, 0.2);
-	background-clip: padding-box;
-	margin: -2.5em auto 0;
-	width: 80px;
-	height: 80px;
-	position: relative;
-	z-index: 100;
-
-	.format {
-		margin-left: -20px;
-		margin-top: -20px;
-		width: 40px;
-		height: 40px;
-		position: absolute;
-		left: 50%;
-		top: 51%; 
-	}
-
 }
 
 /* Big Image */

@@ -513,16 +513,25 @@ if (!function_exists('redux_init')) :
 		'icon' => 'el-icon-cogs',
 		'desc' => __('Layout Settings', 'redux-framework-demo'),
 		'title' => __('Layout Settings', 'redux-framework-demo'),
-		'fields' => array(	
+		'fields' => array(
+			array(
+				'id'=>'blog_section_title',
+				'type' => 'text',
+				'title' => __('Blog Title', 'redux-framework-demo'), 
+				'subtitle' => __('', 'redux-framework-demo'),
+				'placeholder' => __('Enter a Title for the Blog', 'redux-framework-demo')				
+			),
 			array(
 				'id'=>'blog_layout',
 				'type' => 'select',
 				'title' => __('Blog Layout', 'redux-framework-demo'), 
 				'subtitle' => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
 				'options' => array(
-					'masonry'=>'Masonry', 
-					'big_image'=>'Big Image',
-					'small_image'=>'Small Image'
+					'masonry'     => 'Masonry', 
+					'big_image'   => 'Big Image',
+					'small_image' => 'Small Image',
+					'big_ribbon'  => 'Big Ribbon',
+					'small_ribbon'=> 'Small Ribbon'
 					),
 				'default' => 'big_image',
 				),					

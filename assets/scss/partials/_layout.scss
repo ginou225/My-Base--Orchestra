@@ -20,6 +20,27 @@
 }
 
 /* 2: Navigation */
+.social_container {
+	max-height: 50px;
+	overflow: hidden;
+}
+
+.social {
+	margin: 0;
+	li {
+		margin: 0;
+	}
+
+	a {
+		color: #555;
+		padding: 0.8em;
+		&:hover {
+			color: #fff;
+			background-color: #ccc;
+		}
+	}
+}
+
 .master_nav {
 	background-color: #eee;
 	padding: 0;

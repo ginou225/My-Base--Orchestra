@@ -27,14 +27,14 @@
 						</h1>
 					</section>
 					<div class="columns large-6">
-						<?php get_template_part('templates/includes/inc', 'sociallist'); ?>
+						&nbsp;
 					</div>
 				</div>
 			</header>
 
 			<div class="master_nav full show-for-large-up" data-magellan-expedition="fixed">
 				<div class="row">
-					<div class="site_nav column large-9">
+					<div class="site_nav column large-8">
 						<?php
 							$defaults = array(
 								'theme_location'  => 'primary',
@@ -50,8 +50,11 @@
 							wp_nav_menu( $defaults );
 						?>
 					</div>
-					<div class="column large-3">
-						<?php //get_search_form(); ?>
+					<div class="column large-4">
+						<?php get_search_form(); ?>
+						<div class="social_container right p_absolute">
+							<?php get_template_part('templates/includes/inc', 'sociallist'); ?>
+						</div>
 					</div>
 				</div>
 			</div>

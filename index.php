@@ -8,12 +8,13 @@
 
 		<?php if ($layout == "masonry") { 
 				get_template_part('templates/pages/page', 'masonry');
-			}elseif ($layout == "big_image") {
+			} elseif ($layout == "big_ribbon") {
+				get_template_part('templates/pages/page', 'bigribbon');
+			} elseif ($layout == "big_image") {
 				get_template_part('templates/pages/page', 'bigimage');
 			} else {
 				get_template_part('templates/pages/page', 'smallimage');
 		} ?>
-		<!-- small image content -->
 		
 	</div>
 

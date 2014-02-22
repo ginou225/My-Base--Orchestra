@@ -6,18 +6,18 @@
 		<?php if (has_post_thumbnail() ) { ?>
 			<section class="columns large-4">
 			<!-- thumbnail -->
-            <figure class="post_thumb post-image background-scale th">
+            <figure class="post_thumb post-image ImageWrapper BackgroundS th">
                 <?php 
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail('post-image-small');
 					} 
 				?>
-                <div class="img-overlay pat-override"></div>
-                <ol class="common-style pat-override">
-                	<li class="white-rounded">
-                		<a href="<?php the_permalink(); ?>"><i class="fa fa-link"></i></a>
-                	</li>
-                </ol>
+                <div class="ImageOverlayH"></div>
+		        <div class="Buttons StyleC">
+                	<span class="WhiteRounded">
+                		<a href="<?php the_permalink(); ?>"><i class="fa fa-link fa-lg"></i></a>
+                	</span>
+                </div>
             </figure>
             <!-- /thumbnail -->
 		</section>

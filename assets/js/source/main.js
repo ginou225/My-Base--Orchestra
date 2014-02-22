@@ -9,6 +9,8 @@
 	$(function() {
 		$(document).foundation();
 
+		new UISearch( document.getElementById( 'sb-search' ) );
+
 		$('.collapsible').collapsible();
 
 		$.scrollUp({

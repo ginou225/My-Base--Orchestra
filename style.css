@@ -8989,6 +8989,26 @@ a:hover, a:visited:hover {
 }
 
 /* 2: Navigation */
+.social_container {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.social {
+  margin: 0;
+}
+.social li {
+  margin: 0;
+}
+.social a {
+  color: #555;
+  padding: 0.8em;
+}
+.social a:hover {
+  color: #fff;
+  background-color: #ccc;
+}
+
 .master_nav {
   background-color: #eee;
   padding: 0;
@@ -9123,10 +9143,44 @@ img.wp-smiley {
 }
 
 /* Block and Masonry blocks */
+#masonryContainer {
+  width: 0 auto;
+}
+
+.format_icon {
+  color: #fff;
+  background-color: #555;
+}
+.format_icon .format {
+  width: 40px;
+  height: 40px;
+}
+.format_icon .dashicons {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+
 .post_blog {
   background-color: #fff;
   border: 1px solid #ccc;
   position: relative;
+}
+.post_blog .format_icon {
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  margin: -2.5em auto 0;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 10;
+}
+.post_blog .format_icon .format {
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  left: 50%;
+  top: 51%;
 }
 .post_blog .post_head {
   text-align: center;
@@ -9169,31 +9223,6 @@ img.wp-smiley {
   background-color: #eee;
   border-top: 1px solid #ccc;
   padding: 10px 5px;
-}
-
-#masonryContainer {
-  width: 0 auto;
-}
-
-.format_icon {
-  color: #fff;
-  background-color: #555;
-  border: 8px solid rgba(0, 0, 0, 0.2);
-  background-clip: padding-box;
-  margin: -2.5em auto 0;
-  width: 80px;
-  height: 80px;
-  position: relative;
-  z-index: 100;
-}
-.format_icon .format {
-  margin-left: -20px;
-  margin-top: -20px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  top: 51%;
 }
 
 /* Big Image */
@@ -9575,6 +9604,108 @@ blockquote {
 
 /* WIDGETS */
 /* SEARCH */
+.sb-search {
+  min-width: 50px;
+  width: 0%;
+  height: 50px;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width 0.8s;
+  -moz-transition: width 0.8s;
+  transition: width 0.8s;
+  -webkit-backface-visibility: hidden;
+}
+
+.sb-search-input {
+  color: #2c3e50;
+  font-family: FontAwesome;
+  font-size: 20px;
+  background: #fff;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 20px 65px 20px 20px;
+  width: 100%;
+  height: 50px !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+input[type="search"].sb-search-input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+.sb-search-input::-webkit-input-placeholder, .sb-search-input:-moz-placeholder, .sb-search-input::-moz-placeholder, .sb-search-input:-ms-input-placeholder {
+  color: #555;
+}
+
+.sb-icon-search, .sb-search-submit {
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.sb-search-submit {
+  color: transparent;
+  background: #fff;
+  /* IE needs this */
+  outline: none;
+  border: none;
+  opacity: 0;
+  z-index: -1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 8 */
+  filter: alpha(opacity=0);
+  /* IE 5-7 */
+}
+
+.sb-icon-search {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-transform: none;
+  background: #666;
+  z-index: 90;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sb-icon-search:before {
+  content: "\f002";
+  font-family: FontAwesome;
+}
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+  width: 100%;
+}
+
+.sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search {
+  color: #fff;
+  background: #333;
+  z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+  z-index: 90;
+}
+
 /* COMMENTS */
 #comments {
   position: relative;
@@ -9764,6 +9895,18 @@ ol.commentlist li.odd {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.p_absolute {
+  position: absolute;
+}
+
+.p_relative {
+  position: relative;
+}
+
+.p_static {
+  position: static;
+}
+
 /*
  * Image replacement
  */
