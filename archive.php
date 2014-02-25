@@ -1,56 +1,43 @@
-<?php get_header(); ?>
+<?php get_header(); 
+/**
+ * The template for choosing a archive layout
+ */
+	global $mb_base;
+	$layout = $mb_base['archive_layout'];
+?>
 
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
-		<!-- content -->
-		<div class="content columns large-8">
-
-		<?php if ( have_posts() ) : ?>
-			<?php
-				if ( is_category() ) {
-					// show an optional category description
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
-
-				} elseif ( is_tag() ) {
-					// show an optional tag description
-					$tag_description = tag_description();
-					if ( ! empty( $tag_description ) )
-						echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
-				}
-			?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<article <?php post_class() ?>>
-
-						<h1 id="post-<?php the_ID(); ?>">
-							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-						</h1>
-
-						<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
-
-						<div class="entry">
-							<?php the_content(); ?>
-						</div>
-
-				</article>
-			<?php endwhile; ?>
-
-			<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
-
-			<?php else : ?>
-
-				<h1>Nothing found</h1>
-
-			<?php endif; ?>
-
-		</div>
-		<!-- /content -->
 		
-		<?php get_sidebar(); ?>
+		<?php if ($layout == 'masonry') { ?>
+
+			<div class="content clearfix">
+				<?php get_template_part('templates/pages/page', 'masonry'); ?>
+			</div>
+
+		<?php } else { ?>
+
+			<!-- content -->
+			<div class="content columns large-8">
+				<?php if ($layout == "big_ribbon") {
+						get_template_part('templates/pages/page', 'bigribbon');
+					} elseif ($layout == "small_ribbon") {
+						get_template_part('templates/pages/page', 'smallribbon');
+					} elseif ($layout == "big_image") {
+						get_template_part('templates/pages/page', 'bigimage');
+					} else {
+						get_template_part('templates/pages/page', 'smallimage');
+				} ?>
+			</div>
+
+			<!-- sidebar -->
+			<?php get_sidebar(); ?>
+
+		<?php } ?>
 
 	</div>
+
+	<?php get_template_part( 'templates/includes/inc', 'pagination' ); ?>
 </section> 
 <!-- /#main -->
 

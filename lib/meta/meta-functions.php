@@ -15,21 +15,22 @@ function cmb_metaboxes( array $meta_boxes ) {
 	$sidebar = array(
 
 		array( 
-			'id'   => $prefix . 'slide_cta_name',  
+			'id'   => $prefix . 'sidebar',  
 			'name' => 'Select Side Bar', 
-			'type' => 'select', 
+			'type' => 'select',
 			'options' => array(
-		        'shop' => 'Products',
-		        'evts' => 'Events',
-		        'ctas' => 'Calls to Action',
-		    )
+				'default' => 'Default',
+		        'shop'    => 'Products',
+		        'event'   => 'Events',
+		        //'ctas'    => 'Calls to Action'
+		    ),
 		),
 	
 	);
 
 	$meta_boxes[] = array(
 		'title' => 'Sidebar',
-		'pages' => array('page', 'event', 'product'),
+		'pages' => array('page', 'post'),
 		'context'    => 'side',
 		'priority'   => 'high',
 		'fields' => $sidebar

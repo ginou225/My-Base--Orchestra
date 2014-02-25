@@ -33,7 +33,7 @@
 	    	itemSelector: '.masonry-brick',
 	    	columnWidth: '.masonry-brick',
 	    	isAnimated: true,
-        }); 
+        });
 
 	});
  

@@ -1,3 +1,47 @@
 /* WIDGETS */
 
-.widget { }
+/* twitter */
+.tweet_container {
+	ul {
+		padding: 0;
+	}
+}
+
+.tweet {
+	padding: 0 0 0 45px;
+	.bird{
+		color: #ccc;
+		top: 1em;
+		left: 0;
+	}
+}
+.tweet_box {
+	font-size: 0.9em;
+	background: #ffffff;
+	border: 1px solid #ccc;
+	padding: 1em;
+	min-height: 100px;
+	position: relative;
+	&:after, &:before {
+		content: " ";
+		border: solid transparent;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 2em;
+		right: 100%;
+		pointer-events: none;	
+	}
+	&:after {
+		border-color: rgba(255, 255, 255, 0);
+		border-right-color: #ffffff;
+		border-width: 15px;
+		margin-top: -15px;
+	}
+	&:before {
+		border-color: rgba(204, 204, 204, 0);
+		border-right-color: #cccccc;
+		border-width: 16px;
+		margin-top: -16px;
+	}
+}

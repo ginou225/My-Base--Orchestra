@@ -13,13 +13,6 @@ article {
 .entry a { }
 .entry a:hover { }
 
-.entry img {}
-
-.entry .wp-caption { }
-.entry .wp-caption img { }
-.entry .wp-caption .wp-caption-text { }
-.entry .wp-caption.aligncenter { margin: 0 auto; }
-
 img.wp-smiley { 
 	border: none;
 	padding: 0;  
@@ -195,6 +188,28 @@ code, tt { }
 	}
 }
 
+/* Big Ribbon */
+.post_ribbon_big {
+	.clip {
+		max-height: 300px;
+	}
+	.format_icon {
+		padding: 10px;
+	}
+}
+
+/* Small Ribbon */
+.post_ribbon_small {
+	.format_icon {
+		padding: 2px;
+		.dashicons {
+			font-size: 30px;
+			line-height: 30px;
+			padding-top: 5px;
+		}
+	}
+}
+
 /* Sinister Hover Styles */
 
 /* Scale Transform Effects  */
@@ -208,6 +223,71 @@ code, tt { }
 }
 
 /* Image Wrapper */
+
+.ContentWrapperH {
+	.ContentH {
+		background: rgba(0, 0, 0, 0.7);
+		width: 100%;
+		height: 100%;
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:hover .ContentH {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.ContentWrapperHe {
+	* {
+		color: #fff;
+	}
+	.visible_title {
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 10px 20px;
+		width: 100%;
+		bottom: 0;
+		z-index: 1;
+	}
+	&:hover {
+		.visible_title {
+			visibility: hidden;
+			opacity: 0;
+		}
+		.ContentHe {
+			height: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.ContentHe {
+		background: rgba(0, 0, 0, 0.9);
+		width: 100%;
+		height: 0;
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		&:hover 
+			img {
+				-webkit-transform: translateY(100%);
+				-moz-transform: translateY(100%);
+				-ms-transform: translateY(100%);
+				-o-transform: translateY(100%);
+				transform: translateY(100%);
+		}
+		.content {
+			padding: 1.5em;
+		}
+	}
+}
+
 
 .ImageWrapper{
 	position: relative;

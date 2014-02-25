@@ -10,7 +10,7 @@
 		$src_url = get_post_meta($post->ID, '_format_quote_source_url', true);
 	?>
 	<!-- ********* quote big  *********** -->
-	<div class="quote_big row">
+	<div class="quote_big clearfix">
 		<div class="columns large-2 textcenter">
 			<i class="fa fa-quote-left fa-5x"></i>
 		</div>
@@ -31,3 +31,5 @@
 	<!-- ********* quote big  *********** -->	
 </article>
 <!-- /post -->
+
+

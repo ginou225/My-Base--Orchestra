@@ -1,1 +1,1 @@
-Main Sidebar
+Main

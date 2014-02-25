@@ -1,9 +1,14 @@
+<?php
+/*
+Template Name: Full Page
+*/
+?>
 <?php get_header(); ?>
 
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
 		<!-- content -->
-		<div class="content columns large-8">
+		<div class="content columns large-12">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -14,9 +19,8 @@
 		</div>
 		<!-- /content -->
 
-		<?php get_sidebar(); ?>
+	</div>	
 		
-	</div>
 </section> 
 
 <?php get_footer(); ?>

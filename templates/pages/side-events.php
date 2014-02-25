@@ -1,1 +1,1 @@
-Main Events
+<?php dynamic_sidebar( 'Event' ); ?>

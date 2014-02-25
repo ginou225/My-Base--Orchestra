@@ -58,6 +58,17 @@ function mb_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => ''
 	));
+
+	// Events 
+	register_sidebar(array(
+		'name'          => __( 'Event', 'mb' ),
+		'id'            => 'event-widgets',
+		'description'   => __( 'Widgets for Events.', 'mb' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '',
+		'after_title'   => ''
+	));
 }
 
 /**

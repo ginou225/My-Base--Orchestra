@@ -6,7 +6,7 @@
 
 <!-- masonry content -->
 <div class="brick_container">
-	<div id="masonryContainer" class="content">
+	<div id="masonryContainer" class="masonry_content">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="masonry-brick columns large-4">
 	 			<?php if( has_post_thumbnail() ) {

@@ -1,18 +1,43 @@
 .sidebar {
 }
 
-.child_nav {
-	margin: 0 0 15px 0;
-}
+.aside_posts {
+	li {
+		padding-bottom: 0.3em !important;
+		.button {
+			width: auto;
+			display: inline-block;
+		}
+			
+	}
+	.th {
+		border: 2px solid #fff;
+	}
+	.post_title {
+		padding-left: 0.7em;
+		.title {
+			font-size: 1em;
+			margin-bottom: 0.5em;
+		}
+	}
+	.event_landing {
+		.event_header {
+			min-height: 55px;
+		}
+		.block_date_container {
+			padding: 5px 10px;
+			height: 100%;
+			&.blocked {
+				color: #fff;
+				background-color: #666;
+			}
+		}
+		.day {
+			font-size: 2em;
+		}
+		.event_title {
+			padding-left: 60px;
+		}
+	}
 
-.child_nav li {
-	margin-bottom: 0;
-}
-
-.child_nav a {
-	color: #666;
-}
-
-.child_nav .current_page_item a {
-	color: #fff;
 }

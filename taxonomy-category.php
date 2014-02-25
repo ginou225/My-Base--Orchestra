@@ -1,9 +1,9 @@
 <?php get_header(); 
 /**
- * The template for choosing a blog layout
+ * The template for choosing a category layout
  */
 	global $mb_base;
-	$layout = $mb_base['blog_layout'];
+	$layout = $mb_base['category_layout'];
 ?>
 
 <section id="main" class="page_container" role="main">

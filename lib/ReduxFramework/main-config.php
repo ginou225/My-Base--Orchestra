@@ -525,7 +525,8 @@ if (!function_exists('redux_init')) :
 				'id'=>'blog_layout',
 				'type' => 'select',
 				'title' => __('Blog Layout', 'redux-framework-demo'), 
-				'subtitle' => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
+				'desc' => __('Select the Blog Section Layout', 'redux-framework-demo'),
+				'subtitle' => __('<em>For all posts</em>', 'redux-framework-demo'),
 				'options' => array(
 					'masonry'     => 'Masonry', 
 					'big_image'   => 'Big Image',
@@ -534,8 +535,54 @@ if (!function_exists('redux_init')) :
 					'small_ribbon'=> 'Small Ribbon'
 					),
 				'default' => 'big_image',
-				),					
-			),
+				),
+			array(
+				'id'=>'archive_layout',
+				'type' => 'select',
+				'title' => __('Archive Layout', 'redux-framework-demo'), 
+				'desc' => __('Select the Archive Section Layout', 'redux-framework-demo'),
+				'subtitle' => __('<em>For archived</em>', 'redux-framework-demo'),
+				'options' => array(
+					'masonry'     => 'Masonry', 
+					'big_image'   => 'Big Image',
+					'small_image' => 'Small Image',
+					'big_ribbon'  => 'Big Ribbon',
+					'small_ribbon'=> 'Small Ribbon'
+					),
+				'default' => 'big_image',
+				),
+			array(
+				'id'=>'category_layout',
+				'type' => 'select',
+				'title' => __('Category Layout', 'redux-framework-demo'), 
+				'desc' => __('Select the Category Section Layout', 'redux-framework-demo'),
+				'subtitle' => __('<em>For category archives</em>', 'redux-framework-demo'),
+				'options' => array(
+					'masonry'     => 'Masonry', 
+					'big_image'   => 'Big Image',
+					'small_image' => 'Small Image',
+					'big_ribbon'  => 'Big Ribbon',
+					'small_ribbon'=> 'Small Ribbon'
+					),
+				'default' => 'big_image',
+				),
+			array(
+				'id'=>'tag_layout',
+				'type' => 'select',
+				'title' => __('Tag Layout', 'redux-framework-demo'), 
+				'desc' => __('Select the Tag Section Layout', 'redux-framework-demo'),
+				'subtitle' => __('<em>For tags archives</em>', 'redux-framework-demo'),
+				'options' => array(
+					'masonry'     => 'Masonry', 
+					'big_image'   => 'Big Image',
+					'small_image' => 'Small Image',
+					'big_ribbon'  => 'Big Ribbon',
+					'small_ribbon'=> 'Small Ribbon'
+					),
+				'default' => 'big_image',
+				),				
+			),					
+		
 		);
 
 	/*** divide ***/
