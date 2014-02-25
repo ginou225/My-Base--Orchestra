@@ -623,7 +623,7 @@ textarea {
   resize: vertical;
 }
 
-table, .full {
+table, .full_width {
   width: 100%;
 }
 
@@ -9105,6 +9105,27 @@ a:hover, a:visited:hover {
   margin-bottom: 0;
 }
 
+/* 4: Sliders */
+.hero_container {
+  min-height: 300px;
+}
+
+.orbit-container {
+  max-height: 520px;
+  overflow: hidden;
+}
+.orbit-container .slide_content {
+  z-index: 10;
+}
+
+.orbit-bullets-container {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  z-index: 10;
+}
+
 /* GENERAL */
 ::-moz-selection {
   background: orange;
@@ -9482,6 +9503,57 @@ img {
   display: block;
 }
 
+.post_img_block {
+  border: 8px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  position: relative;
+}
+.post_img_block img {
+  background: #eee;
+  display: block;
+}
+.post_img_block [class*="caption"] {
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  filter: alpha(opacity=0);
+  /* IE fix */
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.post_img_block * {
+  color: #fff;
+}
+.post_img_block p {
+  font-size: 0.8rem;
+  line-height: 1.2em;
+  text-shadow: 1px 1px 1px #303857;
+}
+.post_img_block:hover [class*="caption"] {
+  opacity: 1;
+  filter: alpha(opacity=80);
+}
+.post_img_block:hover .caption_from_top {
+  height: 100%;
+}
+.post_img_block .caption_from_top {
+  top: 0;
+  /* direction Y */
+  left: 0;
+  /* direction X */
+  width: 100%;
+  height: 0;
+}
+
 /* POST FORMATS */
 /* quotes */
 blockquote {
@@ -9693,52 +9765,7 @@ blockquote {
   padding-left: 60px;
 }
 
-/* WIDGETS */
-/* twitter */
-.tweet_container ul {
-  padding: 0;
-}
-
-.tweet {
-  padding: 0 0 0 45px;
-}
-.tweet .bird {
-  color: #ccc;
-  top: 1em;
-  left: 0;
-}
-
-.tweet_box {
-  font-size: 0.9em;
-  background: #ffffff;
-  border: 1px solid #ccc;
-  padding: 1em;
-  min-height: 100px;
-  position: relative;
-}
-.tweet_box:after, .tweet_box:before {
-  content: " ";
-  border: solid transparent;
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 2em;
-  right: 100%;
-  pointer-events: none;
-}
-.tweet_box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-right-color: #ffffff;
-  border-width: 15px;
-  margin-top: -15px;
-}
-.tweet_box:before {
-  border-color: rgba(204, 204, 204, 0);
-  border-right-color: #cccccc;
-  border-width: 16px;
-  margin-top: -16px;
-}
-
+/* widgets */
 /* SEARCH */
 .sb-search {
   min-width: 50px;
@@ -10018,6 +10045,105 @@ ol.commentlist li.odd {
 
 /* FORMS */
 /* Gravity Forms */
+/* Client Specific */
+/*
+1: Variables
+2: Globals
+3: Typography
+4: Layout
+*/
+/*************************************
+ 	2: Globals
+ *************************************/
+.post_thumb {
+  background-color: #eee;
+}
+.post_thumb.clip {
+  height: 200px;
+  overflow: hidden;
+}
+
+/*************************************
+ 	4: Layout 
+ *************************************/
+/* slider */
+.slide_content {
+  padding: 5em 0;
+}
+.slide_content * {
+  color: #fff;
+}
+
+/* sidekicks */
+.sidekicks_container {
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+}
+
+/* ctas */
+.site_cta {
+  margin: 0;
+  padding: 10px 0;
+  /*.cta {
+  	padding: 15px 0 0;
+  }*/
+}
+.site_cta li {
+  margin: 0 0 0 1.5em;
+  height: 50px;
+  position: relative;
+}
+.site_cta .text {
+  padding: 15px 60px 0 0;
+}
+.site_cta .headshot {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* newsletter */
+.newsletter_container {
+  padding: 15px 0;
+}
+.newsletter_container input, .newsletter_container label {
+  margin-bottom: 0;
+}
+
+.ornates {
+  background-color: #eee;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+}
+.ornates.left {
+  left: -30px;
+}
+.ornates.right {
+  right: -30px;
+}
+
+.section_block {
+  background-color: #eee;
+  padding: 20px 0;
+  min-height: 300px;
+  position: relative;
+}
+
+.parallax {
+  background-color: #999;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */

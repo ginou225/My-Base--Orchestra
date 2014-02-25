@@ -58,7 +58,8 @@
 					</div>
 				</div>
 			</div>
-
+			
+			<?php if(! is_page_template() ) { ?> 
 			<div class="page_title_container full">
 				<div class="row">
 					<section class="columns large-8">
@@ -69,3 +70,4 @@
 					<section class="columns large-4"></section>
 				</div>
 			</div>
+			<?php } ?>

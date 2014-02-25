@@ -17,6 +17,5 @@
 		<?php get_sidebar(); ?>
 		
 	</div>
-</section> 
-
+</section>
 <?php get_footer(); ?>
