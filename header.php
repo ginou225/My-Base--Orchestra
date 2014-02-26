@@ -15,24 +15,24 @@
 
 		<div class="inner-wrap">
 
-			<header class="master_head hide-for-medium-up">
-				<a class="left-off-canvas-toggle" >Menu</a> 
-			</header>
+			<div class="main_header_container">
+				<header class="master_head hide-for-medium-up">
+					<a class="left-off-canvas-toggle" >Menu</a> 
+				</header>
+				
+				<header class="main_header row">
+						        <div class="columns large-5">
+						        	<h1 class="site_title">
+										<a href="<?php echo home_url( '/' ); ?>" class="logo logo_main_org ir"><?php bloginfo( 'name' ); ?></a>
+									</h1>
+						        </div>
+						        <div class="columns large-7">
+						<?php get_template_part('templates/pages/home/site', 'cta'); ?>
+						        </div>
+						    </header>
+			</div>
 
-			<header class="master_head full show-for-large-up">
-				<div class="row">
-					<section class="columns large-6">
-						<h1 class="site_title">
-							<a href="<?php echo home_url( '/' ); ?>" class="logo"><?php bloginfo( 'name' ); ?></a>
-						</h1>
-					</section>
-					<div class="columns large-6">
-						&nbsp;
-					</div>
-				</div>
-			</header>
-
-			<div class="master_nav full show-for-large-up" data-magellan-expedition="fixed">
+			<div class="master_nav full_width show-for-large-up" data-magellan-expedition="fixed">
 				<div class="row">
 					<div class="site_nav column large-8">
 						<?php
@@ -42,7 +42,7 @@
 								'container'       => 'nav',
 								'container_class' => 'menu main_nav',
 								'container_id'    => 'main_navigation',
-								'menu_class'      => '',
+								'menu_class'      => 'sur-menu',
 								'menu_id'         => '',
 								'echo'            => true,
 								'fallback_cb'     => 'wp_page_menu',

@@ -46,7 +46,13 @@
 	padding: 0;
 }
 
-.main_nav > ul {
+.main_nav {
+
+	.sur-menu {
+		li:hover {
+			background-color: none;
+		}
+	}
 	a {
 		border-right: 1px solid #ddd;
 		padding: 1em 0.5em;
@@ -54,13 +60,16 @@
 		&:hover {
 			color: #fff;
 			background-color: #ccc;
-		};
+		}
 	}
-}
+	.sub-menu {
+		background-color: #fff;
+	}
 
-.sub-menu {
-	background-color: #eee;
 }
+	
+
+
 
 /* Drop-down styles. */
 .menu  {

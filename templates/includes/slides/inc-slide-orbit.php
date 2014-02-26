@@ -16,13 +16,13 @@
       <div class="slide_content full_width p_absolute">
         <article class="row">
           <section class="columns large-8">
-            <header>
-              <h2><?php the_title(); ?></h2>
+            <header class="title_container">
+              <h2 class="title"><?php the_title(); ?></h2>
             </header>
             <div class="excerpt">
               <?php the_excerpt(); ?>
             </div>
-            <footer><a href="" class="cta">Read More</a></footer>
+            <footer><a href="<?php the_permalink(); ?>" class="cta wht button small">Read More</a></footer>
           </section>
         </article>
       </div>

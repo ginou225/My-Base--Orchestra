@@ -25,8 +25,8 @@ get_header(); ?>
 	<!-- newsletter -->
     <div class="newsletter_container full_width">
         <div class="newsletter p_relative row">
-        	<span class="ornates left ">left</span>
-        	<span class="ornates right">right</span>
+        	<span class="ornates left flourish_l">&nbsp;</span>
+        	<span class="ornates right flourish_r">&nbsp;</span>
           	<form name="ccoptin" id="ccoptin" action="http://visitor.constantcontact.com/d.jsp" target="_blank" method="post">
                 <div class="large-3 columns">
 	                <label for="right-label" class="right inline">Gut Truster's Newsletter</label>
@@ -37,7 +37,7 @@ get_header(); ?>
             	    <input name="p" id="p" value="oi" type="hidden">
                 </div>
                 <div class="large-2 columns">
-	                <input class="button small postfix" type="submit" id="right-label" value="Sign Up">
+	                <input class="cta button small" type="submit" id="right-label" value="Sign Up">
                 </div>
           	</form>
         </div>

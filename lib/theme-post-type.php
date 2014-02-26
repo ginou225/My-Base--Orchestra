@@ -88,4 +88,47 @@ function register_cpt_slide() {
 
 //     register_taxonomy( 'slider categories', array('slide'), $args );
 // }
+
+add_action( 'init', 'register_cpt_sidekick' );
+
+function register_cpt_sidekick() {
+
+    $labels = array( 
+        'name' => _x( 'Sidekicks', 'sidekick' ),
+        'singular_name' => _x( 'Sidekick', 'sidekick' ),
+        'add_new' => _x( 'Add New', 'sidekick' ),
+        'add_new_item' => _x( 'Add New Sidekick', 'sidekick' ),
+        'edit_item' => _x( 'Edit Sidekick', 'sidekick' ),
+        'new_item' => _x( 'New Sidekick', 'sidekick' ),
+        'view_item' => _x( 'View Sidekick', 'sidekick' ),
+        'search_items' => _x( 'Search Sidekicks', 'sidekick' ),
+        'not_found' => _x( 'No sidekicks found', 'sidekick' ),
+        'not_found_in_trash' => _x( 'No sidekicks found in Trash', 'sidekick' ),
+        'parent_item_colon' => _x( 'Parent Sidekick:', 'sidekick' ),
+        'menu_name' => _x( 'Sidekicks', 'sidekick' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'hierarchical' => true,
+        
+        'supports' => array( 'title', 'excerpt', 'thumbnail', 'page-attributes' ),
+        
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        
+        
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => true,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => true,
+        'capability_type' => 'page'
+    );
+
+    register_post_type( 'sidekick', $args );
+}
 ?>
