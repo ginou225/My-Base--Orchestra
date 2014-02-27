@@ -1,6 +1,15 @@
 .sidebar {
 }
 
+.featured_aside_post {
+	.visible_title {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.content {
+		padding: 1.5em;
+	}
+}
+
 .aside_posts {
 	li {
 		padding-bottom: 0.3em !important;

@@ -23,7 +23,7 @@
                 </div>
 
                 <footer class="section_footer">
-	                <a href="#" class="button small">View All</a>    
+	                <a href="#" class="cta button small">View All</a>    
                 </footer>
             </div>	
 

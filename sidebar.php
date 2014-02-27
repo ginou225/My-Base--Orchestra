@@ -27,7 +27,7 @@
 	?>
 
 	<?php while ( $featured->have_posts() ) : $featured->the_post(); ?> 
-		<section id="post-<?php the_ID(); ?>" <?php post_class('aside_post blog_post') ?>>
+		<section id="post-<?php the_ID(); ?>" <?php post_class('featured_aside_post blog_post') ?>>
 			<figure class="featured post_thumb post-image ImageWrapper ContentWrapperHe clip th">
 				<?php 
 					if ( has_post_thumbnail() ) {
@@ -42,7 +42,7 @@
 	                    <header>
 	                    	<h3><?php the_title(); ?></h3>
 	                    </header>
-	                    <p><?php the_excerpt(); ?></p>
+	                    <div class="excerpt"><?php the_excerpt(); ?></div>
 
 	                    <div class="ReadMore">
 	                        <a href="<?php the_permalink(); ?>">Read More</a>

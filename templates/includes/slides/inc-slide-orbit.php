@@ -1,4 +1,10 @@
-<?php // WP_Query arguments
+<?php
+/**
+ * Display Foundation5 Orbit Slider
+ *
+ */
+
+// WP_Query arguments
 	$slide_args = array (
 		'post_type'              => 'slide',
 		'posts_per_page'         => '5',

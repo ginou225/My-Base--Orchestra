@@ -307,6 +307,14 @@ if (!function_exists('redux_init')) :
 				'placeholder' => '123 Random Street',
 			),
 			array(
+				'id'=>'city',
+				'type' => 'text',
+				'title' => __('City', 'redux-framework-demo'), 
+				'desc' => __('Enter City is applicable', 'redux-framework-demo'),
+				'default' => '',
+				'placeholder' => 'Anywhere',
+			),
+			array(
 				'id'=>'us_state',
 				'type' => 'select',
 				'title' => __('State', 'redux-framework-demo'), 

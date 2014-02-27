@@ -66,6 +66,30 @@ function cmb_metaboxes( array $meta_boxes ) {
 		'fields' => $slider
 	);
 
+	// Sidekick Fields **************************************************************
+	$sidekick = array(
+
+		array( 
+			'id'   => $prefix . 'side_cta_name',  
+			'name' => 'Call to Action Name', 
+			'type' => 'text', 
+		),
+		array( 
+			'id'   => $prefix . 'side_cta',  
+			'name' => 'Call to Action Link', 
+			'type' => 'text_url', 
+		),
+	
+	);
+
+	$meta_boxes[] = array(
+		'title' => 'Call to Action Options',
+		'pages' => array('sidekick'),
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'fields' => $sidekick
+	);
+
 
 	return $meta_boxes;
 

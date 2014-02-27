@@ -40,6 +40,7 @@ $pf-gallery:  #60ca5b;
 	background-color: rgba(255, 255, 255, 0.1);
 	border: 1px solid #fff;
 	&:hover {
+		color: #fff;
 		background-color: $org-main;
 	}
 }
@@ -53,7 +54,9 @@ $pf-gallery:  #60ca5b;
  	margin: 0;
  	width: 360px;
  	height: 94px;
-
+		a {
+			top: 1px;
+		}
  }
 
  .logo_main_org, .logo_main, .logo_small, .flourish_r, .flourish_l {
@@ -123,7 +126,7 @@ $pf-gallery:  #60ca5b;
  	4: Layout 
  *************************************/
 
- .main_header_container {
+ .main_header_container, .main_footer_container {
  	background-color: $blue-main;
  	padding-top: 10px;
  }
@@ -132,6 +135,7 @@ $pf-gallery:  #60ca5b;
 
  .master_nav {
  	background-color: #fff;
+ 	border-bottom: 1px solid #ccc;
  	.site_nav {
  		height: 50px;
  	}
@@ -277,7 +281,36 @@ $pf-gallery:  #60ca5b;
 	z-index: 5;
 }
 
+.sk_post {
+	.excerpt {
+		p {
+			margin-bottom: 0.5em
+		}
+	}
+	.title {
+		font-size: 1.2rem;
+		text-shadow: 1px 1px 2px #000;
+	}
+	.content {
+		padding: 0.5em 0.8em;
+	}
+	.clip {
+		height: 160px;
+	}
+}
+
 /* ctas */
+
+.small_ind {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px solid #fff;
+	padding: 1px;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: text-bottom;
+}
 
 .cta {
 	@include clear_button();
@@ -340,17 +373,20 @@ $pf-gallery:  #60ca5b;
 .section_block {
 	background-color: #eee;
 	padding: 20px 0;
-	min-height: 300px;
+	min-height: 400px;
 	position: relative;
+	.block {
+		background-color: #555;
+		height: 500px;
+	}
 }
 
-.parallax {
-	background-color: #999;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center 0;
+.fixed_bg {
+	background-position: 0 0;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+	-webkit-background-size: cover;
 	background-size: cover;
-	height: 500px;
 	overflow: hidden;
 	position: absolute;
 	top: 0;

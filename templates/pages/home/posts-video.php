@@ -1,4 +1,9 @@
 <?php
+/**
+ * Display Homepage Recent Videos
+ *
+ */
+
 	global $mb_base;
 	$title_v = $mb_base['recent_v_title'];
 	$brief =$mb_base['recent_v_editor'];
@@ -46,10 +51,10 @@
 				); 
 
 				// The Query
-				$recent = new WP_Query( $args );
+				$recent_video = new WP_Query( $args );
 			?>
 
-			<?php while ( $recent->have_posts() ) : $recent->the_post(); ?> 
+			<?php while ( $recent_video->have_posts() ) : $recent_video->the_post(); ?> 
 
 				<div class="large-3 columns">
 					

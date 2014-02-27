@@ -51,44 +51,45 @@ function register_cpt_slide() {
 }
 
 
-//add_action( 'init', 'register_taxonomy_slider categories' );
+add_action( 'init', 'register_taxonomy_slider_categories' );
 
-// function register_taxonomy_slider categories() {
+function register_taxonomy_slider_categories() {
 
-//     $labels = array( 
-//         'name' => _x( 'Slider Categories', 'slider categories' ),
-//         'singular_name' => _x( 'Slider Category', 'slider categories' ),
-//         'search_items' => _x( 'Search Slider Categories', 'slider categories' ),
-//         'popular_items' => _x( 'Popular Slider Categories', 'slider categories' ),
-//         'all_items' => _x( 'All Slider Categories', 'slider categories' ),
-//         'parent_item' => _x( 'Parent Slider Category', 'slider categories' ),
-//         'parent_item_colon' => _x( 'Parent Slider Category:', 'slider categories' ),
-//         'edit_item' => _x( 'Edit Slider Category', 'slider categories' ),
-//         'update_item' => _x( 'Update Slider Category', 'slider categories' ),
-//         'add_new_item' => _x( 'Add New Slider Category', 'slider categories' ),
-//         'new_item_name' => _x( 'New Slider Category', 'slider categories' ),
-//         'separate_items_with_commas' => _x( 'Separate slider categories with commas', 'slider categories' ),
-//         'add_or_remove_items' => _x( 'Add or remove slider categories', 'slider categories' ),
-//         'choose_from_most_used' => _x( 'Choose from the most used slider categories', 'slider categories' ),
-//         'menu_name' => _x( 'Slider Categories', 'slider categories' ),
-//     );
+    $labels = array( 
+        'name' => _x( 'Slider Categories', 'slider categories' ),
+        'singular_name' => _x( 'Slider Category', 'slider categories' ),
+        'search_items' => _x( 'Search Slider Categories', 'slider categories' ),
+        'popular_items' => _x( 'Popular Slider Categories', 'slider categories' ),
+        'all_items' => _x( 'All Slider Categories', 'slider categories' ),
+        'parent_item' => _x( 'Parent Slider Category', 'slider categories' ),
+        'parent_item_colon' => _x( 'Parent Slider Category:', 'slider categories' ),
+        'edit_item' => _x( 'Edit Slider Category', 'slider categories' ),
+        'update_item' => _x( 'Update Slider Category', 'slider categories' ),
+        'add_new_item' => _x( 'Add New Slider Category', 'slider categories' ),
+        'new_item_name' => _x( 'New Slider Category', 'slider categories' ),
+        'separate_items_with_commas' => _x( 'Separate slider categories with commas', 'slider categories' ),
+        'add_or_remove_items' => _x( 'Add or remove slider categories', 'slider categories' ),
+        'choose_from_most_used' => _x( 'Choose from the most used slider categories', 'slider categories' ),
+        'menu_name' => _x( 'Slider Categories', 'slider categories' ),
+    );
 
-//     $args = array( 
-//         'labels' => $labels,
-//         'public' => true,
-//         'show_in_nav_menus' => false,
-//         'show_ui' => true,
-//         'show_tagcloud' => false,
-//         'show_admin_column' => false,
-//         'hierarchical' => true,
+    $args = array( 
+        'labels' => $labels,
+        'public' => true,
+        'show_in_nav_menus' => false,
+        'show_ui' => true,
+        'show_tagcloud' => false,
+        'show_admin_column' => false,
+        'hierarchical' => true,
 
-//         'rewrite' => true,
-//         'query_var' => true
-//     );
+        'rewrite' => true,
+        'query_var' => true
+    );
 
-//     register_taxonomy( 'slider categories', array('slide'), $args );
-// }
+    register_taxonomy( 'slider categories', array('slide'), $args );
+}
 
+// Sidekicks
 add_action( 'init', 'register_cpt_sidekick' );
 
 function register_cpt_sidekick() {
@@ -117,6 +118,8 @@ function register_cpt_sidekick() {
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
+        'menu_icon' => 'dashicons-screenoptions',
+        'menu_position' => 15,
         
         
         'show_in_nav_menus' => true,
@@ -130,5 +133,41 @@ function register_cpt_sidekick() {
     );
 
     register_post_type( 'sidekick', $args );
+}
+
+function register_taxonomy_sidekick_types() {
+
+    $labels = array( 
+        'name' => _x( 'Sidekick Types', 'sidekick_types' ),
+        'singular_name' => _x( 'Sidekick Type', 'sidekick_types' ),
+        'search_items' => _x( 'Search Sidekick Types', 'sidekick_types' ),
+        'popular_items' => _x( 'Popular Sidekick Types', 'sidekick_types' ),
+        'all_items' => _x( 'All Sidekick Types', 'sidekick_types' ),
+        'parent_item' => _x( 'Parent Sidekick Type', 'sidekick_types' ),
+        'parent_item_colon' => _x( 'Parent Sidekick Type:', 'sidekick_types' ),
+        'edit_item' => _x( 'Edit Sidekick Type', 'sidekick_types' ),
+        'update_item' => _x( 'Update Sidekick Type', 'sidekick_types' ),
+        'add_new_item' => _x( 'Add New Sidekick Type', 'sidekick_types' ),
+        'new_item_name' => _x( 'New Sidekick Type', 'sidekick_types' ),
+        'separate_items_with_commas' => _x( 'Separate sidekick types with commas', 'sidekick_types' ),
+        'add_or_remove_items' => _x( 'Add or remove sidekick types', 'sidekick_types' ),
+        'choose_from_most_used' => _x( 'Choose from the most used sidekick types', 'sidekick_types' ),
+        'menu_name' => _x( 'Sidekick Types', 'sidekick_types' ),
+    );
+
+    $args = array( 
+        'labels' => $labels,
+        'public' => true,
+        'show_in_nav_menus' => false,
+        'show_ui' => true,
+        'show_tagcloud' => false,
+        'show_admin_column' => false,
+        'hierarchical' => true,
+
+        'rewrite' => true,
+        'query_var' => true
+    );
+
+    register_taxonomy( 'sidekick_types', array('sidekick'), $args );
 }
 ?>

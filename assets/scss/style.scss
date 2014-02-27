@@ -10,7 +10,7 @@ Version: 1.0
 */
 
 // Compass imports
-/*@import "compass";*/
+@import "compass";
 
 // Reset, Variables, Mixins, Etc
 // DO NOT EDIT ORDER OF FILES
@@ -20,6 +20,7 @@ Version: 1.0
 
 // Globals
 @import "partials/global";
+@import "partials/helpers";
 
 // The grid
 @import "foundation";
@@ -41,5 +42,4 @@ Version: 1.0
 @import "partials/client";
 
 // Helper Classes, Media Queries, Print, Etc
-@import "partials/helpers";
 @import "partials/print";
