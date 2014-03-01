@@ -52,10 +52,24 @@
 					elseif ( $_product->is_type('virtual') ) jigoshop_get_template( 'product/virtual/add-to-cart.php' );
 				?>
 
-				<div class="entry-meta">
-					<?php if ($_product->is_type('simple')) : ?>
-						<span class="sku">SKU: <?php echo $_product->sku; ?>.</span> 
-					<?php endif; ?><?php echo $_product->get_categories( ', ', 'Posted in ', '.'); ?> <?php echo $_product->get_tags( ', ', 'Tagged as ', '.'); ?>
+				<div class="entry-meta product_meta row">
+					<ul class="inline-list">
+						<?php if ($_product->is_type('simple')) : ?>
+						<li><span class="sku">SKU: <?php echo $_product->sku; ?>.</span></li>
+						<?php endif; ?>
+						<li>
+							<a href="#" class="cta button tiny" data-dropdown="product_cat">Categories</a>
+							<div id="product_cat" data-dropdown-content class="f-dropdown content">
+								<?php echo $_product->get_categories('', '', ''); ?>
+							</div>
+						</li>
+						<li>
+							<a href="" class="cta button tiny" data-dropdown="product_tag">Tags</a>
+							<div id="product_tag" class="f-dropdown content" data-dropdown-content>
+								<?php echo $_product->get_tags('', '', ''); ?>
+							</div>
+						</li>
+					</ul>								 
 				</div>
 				
 				<?php do_action('after_product'); ?>

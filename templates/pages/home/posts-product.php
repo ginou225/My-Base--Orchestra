@@ -7,14 +7,14 @@
 <div class="block fixed_bg full_width" style="background-image: url(<?php echo $bg; ?>);"></div>
 <!-- section title -->
 <div class="row">
-  <header class="columns small-centered small-8 textcenter">
-    <h3>
+  <header class="section_featured columns small-centered small-8 textcenter">
+    <h2 class="title">
       <?php if($title) {
         echo $title; 
       } else {
         echo "Recent Products";
       } ?>
-    </h3>
+    </h2>
   </header>
 </div>
 <!-- /section title -->
@@ -75,7 +75,7 @@
 <!-- section footer -->
 <div class="row">
   <footer class="columns small-centered small-8 textcenter">
-    <a href="#" class="button small">View All</a>
+    <a href="#" class="cta wht button">View All</a>
   </footer>
 </div>
 <!-- section footer -->

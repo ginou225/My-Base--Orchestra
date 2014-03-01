@@ -171,7 +171,7 @@ function mb_scripts() {
 	wp_enqueue_style( 'mb_style' );
 	
 	//Jigoshop
-	if ( is_jigoshop() && is_cart() && is_checkout() ) {
+	if ( is_shop() || is_product_list() || is_product() || is_cart() || is_checkout() ) {
 		wp_enqueue_style( 'jigoshop', get_template_directory_uri() . '/jigoshop.css' );
 	}
 

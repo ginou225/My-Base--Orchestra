@@ -1,7 +1,9 @@
 /*Table of Contents
-1: Header / Footer
+1: Header / Footer / Page
 2: Navigation
 3: Search
+4: Slider
+5: Extras
 
 */
 
@@ -14,9 +16,13 @@
 }
 
 
-/* 1: Header Footer */
+/* 1: Header / Footer / Page */
 .master_head, .master_foot {
 	background-color: #ccc;
+}
+
+.page_content {
+	padding: 2em 0 !important;
 }
 
 /* 2: Navigation */
@@ -67,9 +73,6 @@
 	}
 
 }
-	
-
-
 
 /* Drop-down styles. */
 .menu  {
@@ -181,4 +184,13 @@
 	position: absolute;
 	bottom: -10px;
 	z-index: 10;
+}
+
+/* 5: Extras */
+.product_meta {
+	a {
+		font-size: 0.8em;
+		padding: 3px 0;
+		display: block;
+	}
 }

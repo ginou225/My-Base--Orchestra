@@ -294,9 +294,9 @@ if (!function_exists('redux_init')) :
 				'title' => __('Primary Phone Number', 'redux-framework-demo'), 
 				'desc' => __('Enter Phone Number', 'redux-framework-demo'),
 				'default' => '',
-				'placeholder' => '1-800-123-4567',
-				'validate' => 'email',
-        		'msg' => 'Enter a valid email address',
+				'placeholder' => '18001234567',
+				'validate' => 'numeric',
+        		'msg' => 'Enter a valid Phone Number',
 			),
 			array(
 				'id'=>'street_address',
@@ -729,9 +729,23 @@ if (!function_exists('redux_init')) :
 					'small_ribbon'=> 'Small Ribbon'
 					),
 				'default' => 'big_image',
+				),	
+			// Shop layout
+			array(
+				'id'=>'shop_layout',
+				'type' => 'select',
+				'title' => __('Store Layout', 'redux-framework-demo'), 
+				'desc' => __('Select the Store Layout', 'redux-framework-demo'),
+				'subtitle' => __('<em>For tags archives</em>', 'redux-framework-demo'),
+				'options' => array(
+					'lt_sidebar'   => 'Left Sidebar', 
+					'rt_sidebar'   => 'Right Sidebar',
+					'no_sidebar'   => 'No Sidebar',
+					),
+				'default' => 'no_sidebar',
 				),				
-			),					
-		
+			),
+						
 		);
 
 	/*** divide ***/

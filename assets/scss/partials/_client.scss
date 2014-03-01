@@ -24,7 +24,7 @@ $pf-gallery:  #60ca5b;
 
 @mixin section_header() {
 	color: #fff;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 @mixin clear_button() {
@@ -36,7 +36,6 @@ $pf-gallery:  #60ca5b;
 
 @mixin clear_button_wht() {
 	color: #fff;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 	background-color: rgba(255, 255, 255, 0.1);
 	border: 1px solid #fff;
 	&:hover {
@@ -117,18 +116,83 @@ $pf-gallery:  #60ca5b;
  	font-weight: 300;
  }
 
- h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4, h5, h6, .title {
  	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
  	font-weight: normal;
  }
 
+.vcard {
+ 	border-width: 0;
+ 	margin-bottom: 10px;
+ 	padding: 0 0 20px; 
+ 	display: block;
+ 	span {
+		color: #fff;
+	 	font-style: normal;
+		font-size: 0.9em;
+		display: block;
+	}
+}
+
 /*************************************
  	4: Layout 
  *************************************/
-
+ 
+ /* header */
  .main_header_container, .main_footer_container {
  	background-color: $blue-main;
  	padding-top: 10px;
+ 	.fa {
+ 		color: $blue-lite;
+ 	}
+ }
+
+ /* footer */
+ .main_footer_container {
+ 	* {
+		color: #fff;
+ 	}
+ }
+
+ .main_footer {
+ 	padding-bottom: 20px;
+ }
+
+ .credits_container {
+ 	background-color: #486781;
+ 	.footer_site_nav a {
+ 		color: $blue-lite;
+ 		font-size: 0.8rem;
+ 		text-transform: uppercase;
+ 		padding: 1.5em 0.3em;
+ 	}
+ }
+
+ .logo_container {
+ 	height: 85px;
+ }
+
+ .copyright {
+ 	p {
+ 		margin-bottom: 0;
+		padding: 0.8em;
+ 	}
+ }
+
+ .section_block {
+ 	background: #f3f3f3 url('assets/images/flourish_mid.png') no-repeat center;
+ 	.block_title, .excerpt * {
+ 		color: #666;
+ 		text-shadow: 1px 1px 1px #fff;
+ 	}
+ 	.section_featured .title {
+ 		@include section_header();
+ 		font-size: 2rem;
+ 	}
+ }
+
+ .footer_block_height {
+ 	height: 50px;
  }
 
  /* navs */
@@ -224,8 +288,14 @@ $pf-gallery:  #60ca5b;
 		}
 	}
 }
-	
 
+/* page */
+.page_title_container {
+	background-color: #ccc;
+	.page_title {
+		@include section_header();
+	}
+}
 
 /* search */
 
@@ -323,13 +393,26 @@ $pf-gallery:  #60ca5b;
  	margin: 0;
  	padding: 25px 0 0;
  	li {
- 		margin: 0 0 0 1.5em;
- 		height: 50px;
+ 		border: 1px solid $blue-main;
+ 		margin: 0 0 0 1em;
+ 		padding-left: 5px;
+ 		height: 54px;
  		position: relative;
+ 		&:hover {
+ 			border: 1px solid rgba(255, 255, 255, 0.2);
+ 			background-color: #486781;
+ 		}
  		a {
  			color: #fff;
  			font-size: 0.8rem;
+ 			font-weight: bold;
  			text-transform: uppercase;
+ 			&:visited, &:active {
+ 				color: #fff;
+ 			}
+ 		}
+ 		.headshot {
+ 			border: 1px solid #fff;
  		}
  	}
  	.text {

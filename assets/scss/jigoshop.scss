@@ -125,7 +125,7 @@ form.cart {
   .button {
     vertical-align: middle;
     float: left;
-    margin: 2px 0!important;
+    margin: 0!important;
   }
 }
 
@@ -2196,4 +2196,62 @@ div {
 
 .pp_fade, .pp_gallery li.default a img {
   display: none;
+}
+
+.price {
+  display: block;
+}
+
+.quantity {
+    margin: 0 0.5em 0 0;
+    min-width: inherit;
+    width: auto!important;
+    float: left;
+    position: relative;
+    overflow: hidden;
+      input.input-text {
+        color: #000!important;
+        text-align: right;
+        line-height: 1em!important;
+        cursor: pointer;
+        border: 1px solid #bbb;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2) inset;
+        padding: 7px 20px;
+        width: 80px;
+        height: auto;
+        float: left;
+      }
+
+      input {
+        &.plus, &.minus {
+            color: #888!important;
+            font-size: 12px;
+            vertical-align: middle;
+            background: none repeat scroll 0 0 #ccc;
+            background: -webkit-linear-gradient(center top, #fff 0, #eee 100%) repeat 0 0 transparent;
+            background: -moz-linear-gradient(center top, #fff 0, #eee 100%) repeat 0 0 transparent;
+            background: -o-linear-gradient(center top, #fff 0, #eee 100%) repeat 0 0 transparent;
+            border: 1px solid #bbb;
+            box-shadow: 0 0 0 1px #fff inset;
+            padding: 0;
+            width: 20px;
+            height: 17px!important;
+        }
+        &.plus {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 4px;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        &.minus {
+          border-radius: 0 0 4px 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
 }

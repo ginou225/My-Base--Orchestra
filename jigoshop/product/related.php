@@ -19,7 +19,9 @@
 <?php $related_products = new WP_Query($args); ?>
 <div class="related_products show-for-medium-up">
 	<dl>
-		<dt><?php printf(__('You also may like:', 'jigoshop') ) ?></dt>
+		<dt class="title">
+			<?php printf(__('You also may like:', 'jigoshop') ) ?>
+		</dt>
 		<?php while ( $related_products->have_posts() ) : $related_products->the_post(); ?> 
 			<dd class="row">	
 				<!-- thumb -->
