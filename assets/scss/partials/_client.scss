@@ -44,12 +44,60 @@ $pf-gallery:  #60ca5b;
 	}
 }
 
+@mixin global_circle() {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
 
 /*************************************
  	2: Globals
  *************************************/
 
- .site_title {
+.jigoshop_price_filter {
+ 	color: $grey-text;
+ 	font-size: 0.8;
+ 	font-weight: bold;
+ 	border: 1px solid #ccc;
+ 	padding: 0.5em 1em;
+ 	form {
+ 		padding-top: 10px;
+ 	}
+ }
+
+.price_slider_wrapper {
+ 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		@include global_circle();
+		background: $blue-main;
+		&:active {
+			background-color: $org-main;
+		}
+	 }
+	.price_slider_amount {
+		color: $grey-text;
+		font-size: 0.8em;
+		font-weight: bold;
+		span {
+			color: $blue-mid;
+		}
+		.button {
+			color: $grey-text;
+			font-size: 0.8em;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: transparent;
+			border: 1px solid $grey-text;
+			&:hover {
+				color: #fff;
+				background-color: $org-main;
+			}
+		}
+	} 
+
+}
+
+.site_title {
  	margin: 0;
  	width: 360px;
  	height: 94px;
@@ -58,7 +106,7 @@ $pf-gallery:  #60ca5b;
 		}
  }
 
- .logo_main_org, .logo_main, .logo_small, .flourish_r, .flourish_l {
+.logo_main_org, .logo_main, .logo_small, .flourish_r, .flourish_l {
 	display: block;
 	background-repeat: no-repeat;
 	background-image: url('assets/images/main.png');

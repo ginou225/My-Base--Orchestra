@@ -194,3 +194,31 @@
 		display: block;
 	}
 }
+
+.jigoshop_price_filter {
+ 	padding: 0.5em 1em;
+ 	form {
+ 		padding-top: 10px;
+ 	}
+ }
+
+.price_slider_wrapper {
+ 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		background-image: none;
+		padding: 10px;
+	 }
+	.price_slider_amount {
+		padding: 1.2em 0 0;
+		width: 100%;
+		float: left;
+		clear: both;
+		.button {
+			margin: 0;
+			padding: 0.5em;
+			float: right;
+			position: relative;
+			top: -5px;
+		}
+	} 
+
+}
