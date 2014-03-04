@@ -233,6 +233,17 @@ function manage_jigoshop_styles() {
 	}
 }
 
+/* Remove automatically post format image add image to content. */
+add_action( 'wp_loaded', 'mb_remove_image_in_content', 2 );
+
+/**
+ * Remove automatically add image to the post content
+ * when choosing post format image from Hybrid Core.
+ */
+function mb_remove_image_in_content() {
+	remove_filter( 'the_content', 'hybrid_image_content' );
+}
+
 /**
  * Remove Query Strings From Static Resources
  */
