@@ -1,0 +1,2 @@
+!function(a){"use strict";a(function(){a("#masonryContainer").imagesLoaded(function(){a("#masonryContainer").masonry({itemSelector:".masonry-brick",columnWidth:".masonry-brick",isAnimated:!0}).resize()})})}(jQuery);
+//# sourceMappingURL=masonry-controls.js.map

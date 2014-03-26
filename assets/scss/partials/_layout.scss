@@ -17,8 +17,12 @@
 
 
 /* 1: Header / Footer / Page */
-.master_head, .master_foot {
-	background-color: #ccc;
+.main_header_container, .main_footer_container {
+	background-color: $grey-mid;
+}
+
+.page_title_container {
+	border-bottom: 1px solid $grey-mid;
 }
 
 .page_content {
@@ -46,8 +50,6 @@
 		}
 	}
 }
-
-
 
 .master_nav {
 	background-color: #eee;
@@ -197,41 +199,33 @@
 	}
 }
 
-.jigoshop_price_filter {
- 	padding: 0.5em 1em;
- 	form {
- 		padding-top: 10px;
- 	}
- }
-
 .price_slider_wrapper {
  	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-		background-image: none;
-		padding: 10px;
+		@include global_circle();
+		background: $grey-text;
+		&:active {
+			background-color: $grey-mid;
+		}
 	 }
 	.price_slider_amount {
-		padding: 1.2em 0 0;
-		width: 100%;
-		float: left;
-		clear: both;
+		color: $grey-text;
+		font-size: 0.8em;
+		font-weight: bold;
+		span {
+			color: $grey-text;
+		}
 		.button {
-			margin: 0;
-			padding: 0.5em;
-			float: right;
-			position: relative;
-			top: -5px;
+			color: $grey-text;
+			font-size: 0.8em;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: transparent;
+			border: 1px solid $grey-text;
+			&:hover {
+				color: #fff;
+				background-color: $grey-mid;
+			}
 		}
 	} 
 
 }
-
-.jigoshop_price_filter {
- 	color: $grey-text;
- 	font-size: 0.8;
- 	font-weight: bold;
- 	border: 1px solid #ccc;
- 	padding: 0.5em 1em;
- 	form {
- 		padding-top: 10px;
- 	}
- }

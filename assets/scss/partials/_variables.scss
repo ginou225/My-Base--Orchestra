@@ -1,9 +1,15 @@
-// Font Face
-//@include fontface('dashicons', 'assets/scss/partials/fonts', 'dashicons');
+//Mixins
+@mixin global_circle() {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
 
 // Colors
-$grey-mid           : #ccc;
-$grey-text          : #999;
+$grey-head 			:#4D4D4D;
+$grey-mid           :#ccc;
+$grey-text          :#999;
 
 // Structure
 $pageWidth: 1000px;
@@ -11,7 +17,7 @@ $fullWidth: 100%;
 $margin-bottom-block: 1em;
 
 // Text Selection
-$selectionColor: orange;
+$selectionColor: pink;
 
 // Links
 $linkColor: #369;

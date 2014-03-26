@@ -29,12 +29,6 @@
 	        zIndex: 2147483647 // Z-Index for the overlay
 		});
 
-		$('#masonryContainer').masonry({  
-	    	itemSelector: '.masonry-brick',
-	    	columnWidth: '.masonry-brick',
-	    	isAnimated: true,
-        });
-
 	});
  
 }(jQuery));

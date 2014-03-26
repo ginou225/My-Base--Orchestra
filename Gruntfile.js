@@ -59,6 +59,18 @@ module.exports = function(grunt) {
                     ]
                 }
             },
+            masonry_controls: {
+                options: {
+                    sourceMap: 'assets/js/masonry-controls.js.map',
+                    sourceMappingURL: 'masonry-controls.js.map',
+                    sourceMapPrefix: 2
+                },
+                files: {
+                    'assets/js/masonry-controls.js': [
+                        'assets/js/source/masonry-controls.js',
+                    ]
+                }
+            },
             main: {
                 options: {
                     sourceMap: 'assets/js/main.js.map',

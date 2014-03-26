@@ -294,8 +294,7 @@ if (!function_exists('redux_init')) :
 				'title' => __('Primary Phone Number', 'redux-framework-demo'), 
 				'desc' => __('Enter Phone Number', 'redux-framework-demo'),
 				'default' => '',
-				'placeholder' => '18001234567',
-				'validate' => 'numeric',
+				'placeholder' => '1-800-123-4567',
         		'msg' => 'Enter a valid Phone Number',
 			),
 			array(
@@ -510,112 +509,7 @@ if (!function_exists('redux_init')) :
 		'icon' => 'el-icon-home',
 	    //'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
 		'fields' => array(
-			array(
-               'id'=>'recent-posts-block-start',
-               'type' => 'section', 
-               'title' => __('Recent Posts Section', 'redux-framework-demo'),
-               'subtitle'=> __('', 'redux-framework-demo'),                            
-              'indent' => true // Indent all options below until the next 'section' option is set.
-            ),
-            array(
-				'id'=>'recent_title',
-				'type' => 'text',
-				'title' => __('Recent Posts Section Title', 'redux-framework-demo'),
-				'placeholder' => 'Enter Recent Posts Title',
-				'subtitle' => __(''),
-				'desc' => __('Enter the Recent Posts Section Title', 'redux-framework-demo'),
-			),
-			array(
-		        'id' => 'recent_post_editor',
-		        'type' => 'editor',
-		        'title' => __('Editor Text', 'redux-framework-demo'), 
-		        'subtitle' => __('Subtitle text would go here.', 'redux-framework-demo'),
-		        'wpautop' => true,
-		        'default' => 'Keep this short',
-		        'editor_options' => array(
-		            'teeny' => true,
-		            'textarea_rows' => 5
-		        	),
-		    ),
-			array(
-				'id'=>'recent_categories',
-				'type' => 'select',
-				'data' => 'categories',
-				'title' => __('Recent Posts Category', 'redux-framework-demo'), 
-				'subtitle' => __('', 'redux-framework-demo'),
-				'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-			),
-            array(
-	            'id'=>'recent-posts-block-end',
-	            'type' => 'section', 
-	            'indent' => false // Indent all options below until the next 'section' option is set.
-            ),
-			array(
-                 'id'=>'video-posts-block-start',
-                 'type' => 'section', 
-                 'title' => __('Video Posts Section', 'redux-framework-demo'),
-                 'subtitle'=> __('', 'redux-framework-demo'),                            
-                 'indent' => true // Indent all options below until the next 'section' option is set.
-            ),
-            array(
-				'id'=>'recent_v_title',
-				'type' => 'text',
-				'title' => __('Recent Posts Section Title', 'redux-framework-demo'),
-				'placeholder' => 'Enter Recent Videos Title',
-				'subtitle' => __(''),
-				'desc' => __('Enter the Recent Posts Section Title', 'redux-framework-demo'),
-			),
-			array(
-		        'id' => 'recent_v_editor',
-		        'type' => 'editor',
-		        'title' => __('Editor Text', 'redux-framework-demo'), 
-		        'subtitle' => __('Subtitle text would go here.', 'redux-framework-demo'),
-		        'wpautop' => true,
-		        'default' => 'Keep this short',
-		        'editor_options' => array(
-		            'teeny' => true,
-		            'textarea_rows' => 5
-		        	),
-		    ),
-            array(
-	            'id'=>'video-posts-block-end',
-	            'type' => 'section', 
-	            'indent' => false // Indent all options below until the next 'section' option is set.
-            ), 
-			array(
-				'id'=>'product_title',
-				'type' => 'text',
-				'title' => __('Product Section Title', 'redux-framework-demo'),
-				'subtitle' => __(''),
-				'desc' => __('Enter the Product Section Title', 'redux-framework-demo'),
-			),
-			// array(
-			// 	'id'=>'product_categories',
-			// 	'type' => 'select',
-			// 	'data' => 'categories',
-			// 	'args' => array('taxonomy' => array('slide_cat') ),
-			// 	'title' => __('Product Select Option', 'redux-framework-demo'), 
-			// 	'subtitle' => __('', 'redux-framework-demo'),
-			// 	'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-			// ),
-			array(
-				'id'=>'product_img',
-				'type' => 'media',
-				'url' => true,
-				'title' => __('Product Background Image', 'redux-framework-demo'),
-				'subtitle' => __(''),
-				'desc' => __('Select an image', 'redux-framework-demo'),
-			),
-			array(
-	            'id'=>'product-block-end',
-	            'type' => 'section', 
-	            'indent' => false // Indent all options below until the next 'section' option is set.
-            ), 	
-			array(
-		        'id'   =>'divider_1',
-		        'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-		        'type' => 'divide'
-		    ),	 		
+				//Home page settings 
 		),
 	);
 
@@ -627,42 +521,6 @@ if (!function_exists('redux_init')) :
 		'desc' => __('Layout Settings', 'redux-framework-demo'),
 		'title' => __('Layout Settings', 'redux-framework-demo'),
 		'fields' => array(
-			array(
-                'id'=>'site-cta-start',
-                'type' => 'section', 
-                'title' => __('Site Call to Action', 'redux-framework-demo'),
-                'subtitle'=> __('With the "section" field you can create indent option sections.', 'redux-framework-demo'),                            
-                'indent' => true // Indent all options below until the next 'section' option is set.
-             ), 
-			array(
-				'id'=>'site-cta-book',
-				'type' => 'switch',
-				'title' => __('Book Lynn', 'redux-framework-demo'), 
-				'subtitle' => __('', 'redux-framework-demo'),
-				'desc' => __('Turn this feature on or off', 'redux-framework-demo'),
-				'default'  => false,
-			),
-			array(
-				'id'=>'site-cta-schedule',
-				'type' => 'switch',
-				'title' => __('Schedule an Appointment', 'redux-framework-demo'), 
-				'subtitle' => __('', 'redux-framework-demo'),
-				'desc' => __('Turn this feature on or off', 'redux-framework-demo'),
-				'default'  => true,
-			),
-			array(
-				'id'=>'site-sidekicks',
-				'type' => 'switch',
-				'title' => __('Site Sidekicks', 'redux-framework-demo'), 
-				'subtitle' => __('', 'redux-framework-demo'),
-				'desc' => __('Turn this feature on or off', 'redux-framework-demo'),
-				'default'  => true,
-			),
-			array(
-                 'id'=>'site-cta-end',
-                 'type' => 'section', 
-                 'indent' => false // Indent all options below until the next 'section' option is set.
-            ),
 			array(
 				'id'=>'blog_section_title',
 				'type' => 'text',

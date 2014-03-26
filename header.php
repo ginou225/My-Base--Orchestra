@@ -2,10 +2,18 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
+	<?php
+		global $mb_base;
+		$favicon = $mb_base['favicon']['thumbnail']; 
+	?>
 	<meta charset="utf-8">
 	<title><?php wp_title(''); ?></title>
 	<meta name="viewport" content="width=device-width">
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
+	<?php if ($favicon) {?>
+		<link rel="shortcut icon" href="<?php echo $favicon; ?>">	
+	<?php } else { ?>
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico">
+	<?php } ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -27,7 +35,7 @@
 									</h1>
 						        </div>
 						        <div class="columns large-7">
-						<?php get_template_part('templates/pages/home/site', 'cta'); ?>
+									ddd
 						        </div>
 						    </header>
 			</div>
