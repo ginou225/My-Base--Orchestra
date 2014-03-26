@@ -47,6 +47,8 @@
 	}
 }
 
+
+
 .master_nav {
 	background-color: #eee;
 	padding: 0;
@@ -222,3 +224,14 @@
 	} 
 
 }
+
+.jigoshop_price_filter {
+ 	color: $grey-text;
+ 	font-size: 0.8;
+ 	font-weight: bold;
+ 	border: 1px solid #ccc;
+ 	padding: 0.5em 1em;
+ 	form {
+ 		padding-top: 10px;
+ 	}
+ }
