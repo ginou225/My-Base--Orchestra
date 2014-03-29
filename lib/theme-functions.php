@@ -205,6 +205,8 @@ function mb_scripts() {
 			}
 		}
 
+		wp_enqueue_script('search', get_template_directory_uri() . '/assets/js/expand_search.js', array(), NULL, true );
+
 		if (!(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)) {
 			// Regular Build
 			wp_enqueue_script('foundation', get_template_directory_uri() . '/assets/js/foundation/foundationmin.js', array('jquery'), NULL, true );
@@ -232,7 +234,8 @@ function manage_jigoshop_styles() {
 	//first check that jigoshop exists to prevent fatal errors
 	if ( function_exists( 'is_jigoshop' ) ) {
 		//dequeue scripts and styles
-		if ( ! is_jigoshop() && ! is_cart() && ! is_checkout() ) {
+		if ( ! is_shop() || ! is_product() || ! is_product_list() || ! is_cart() || ! is_checkout() ) {
+			wp_dequeue_style( 'jigoshop-required' );
 			wp_dequeue_script( 'jigoshop_global' );
 			wp_dequeue_script( 'prettyphoto' );
 			wp_dequeue_script( 'jigoshop_blockui' );
