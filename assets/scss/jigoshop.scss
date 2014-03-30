@@ -34,12 +34,12 @@ div {
   &.jigoshop_error {
     color: #D8000C;
     background-color: #ffd4d4;
-    background-image: url('../images/error.png');
+    background-image: url('jigoshop/images/error.png');
   }
   &.jigoshop_message {
     color: #4F8A10;
     background-color: #DFF2BF;
-    background-image: url('../images/success.png');
+    background-image: url('jigoshop/images/success.png');
   }
 }
 
@@ -260,12 +260,12 @@ table.shop_attributes {
 }*/
 
 .star-rating {
-  background: url(../images/star.png) repeat-x left 0;
+  background: url(jigoshop/images/star.png) repeat-x left 0;
   width: 80px;
   height: 16px;
   float: right;
   span {
-    background: url(../images/star.png) repeat-x left -32px;
+    background: url(jigoshop/images/star.png) repeat-x left -32px;
     padding-top: 16px;
     height: 0;
     float: left;
@@ -293,7 +293,7 @@ p.stars {
   overflow: hidden;
   zoom: 1;
   span {
-    background: url(../images/star.png) repeat-x left 0;
+    background: url(jigoshop/images/star.png) repeat-x left 0;
     width: 80px;
     height: 16px;
     float: left;
@@ -308,10 +308,10 @@ p.stars {
       left: 0;
       overflow: hidden;
       &:hover, &:focus {
-        background: url(../images/star.png) repeat-x left -16px;
+        background: url(jigoshop/images/star.png) repeat-x left -16px;
       }
       &.active {
-        background: url(../images/star.png) repeat-x left -32px;
+        background: url(jigoshop/images/star.png) repeat-x left -32px;
       }
       &.star-1 {
         width: 16px;
@@ -430,7 +430,7 @@ ul {
 
 a.remove {
   text-indent: -9999px;
-  background: url(../images/remove.png) #cccccc;
+  background: url(jigoshop/images/remove.png) #cccccc;
   width: 16px;
   height: 16px;
   display: block;
@@ -552,7 +552,6 @@ td {
 }
 
 .cart input {
-  width: 100px;
   margin: 0!important;
   vertical-align: middle;
   line-height: 1em!important;
@@ -862,7 +861,7 @@ div.shipping-address {
   }
   .jigoshop-validated {
     input.input-text {
-      background-image: url('../images/accepted.jpg') !important;
+      background-image: url('jigoshop/images/accepted.jpg') !important;
       background-position: 95% center!important;
       background-repeat: no-repeat!important;
     }
@@ -875,7 +874,7 @@ div.shipping-address {
       border: red 1px solid!important;
     }
     input.input-text {
-      background-image: url('../images/rejected.png') !important;
+      background-image: url('jigoshop/images/rejected.png') !important;
       background-position: 95% center!important;
       background-repeat: no-repeat!important;
       border: red 1px solid!important;
@@ -952,7 +951,7 @@ div.shipping-address {
     }
     &.chosen a {
       color: #fff;
-      background: #3399cc url(../images/cross_white.png) no-repeat 6px center;
+      background: #3399cc url(jigoshop/images/cross_white.png) no-repeat 6px center;
       border: 1px solid #39c;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -1160,7 +1159,7 @@ input:-ms-input-placeholder {
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   color: #555;
   font-weight: 400;
-  background: #e6e6e6 url(../images/ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+  background: #e6e6e6 url(jigoshop/images/ui/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
   border: 1px solid #d3d3d3;
 }
 
@@ -1176,7 +1175,7 @@ input:-ms-input-placeholder {
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
   color: #212121;
   font-weight: 400;
-  background: #dadada url(../images/ui/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+  background: #dadada url(jigoshop/images/ui/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
   border: 1px solid #999;
 }
 
@@ -1192,7 +1191,7 @@ input:-ms-input-placeholder {
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   color: #212121;
   font-weight: 400;
-  background: white url(../images/ui/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+  background: white url(jigoshop/images/ui/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
   border: 1px solid #aaa;
 }
 
@@ -1211,7 +1210,7 @@ input:-ms-input-placeholder {
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   color: #363636;
-  background: #fbf9ee url(../images/ui/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+  background: #fbf9ee url(jigoshop/images/ui/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
   border: 1px solid #fcefa1;
 }
 
@@ -1221,7 +1220,7 @@ input:-ms-input-placeholder {
 
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   color: #cd0a0a;
-  background: #fef1ec url(../images/ui/ui-bg_inset-soft_95_fef1ec_1x100.png) 50% bottom repeat-x;
+  background: #fef1ec url(jigoshop/images/ui/ui-bg_inset-soft_95_fef1ec_1x100.png) 50% bottom repeat-x;
   border: 1px solid #cd0a0a;
 }
 
@@ -1274,13 +1273,13 @@ input:-ms-input-placeholder {
 .price_slider_wrapper {
   .ui-widget-content {
     color: #222;
-    background: white url(../images/ui/ui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x;
+    background: white url(jigoshop/images/ui/ui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x;
     border: 1px solid #aaa;
   }
   .ui-widget-header {
     color: #222;
     font-weight: 700;
-    background: #cccccc url(../images/ui/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+    background: #cccccc url(jigoshop/images/ui/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
     border: 1px solid #aaa;
   }
 }
@@ -1319,13 +1318,13 @@ div {
     }
     .pp_top {
       .pp_left {
-        background: url(../images/prettyPhoto/default/sprite.png) -78px -93px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -78px -93px no-repeat;
       }
       .pp_middle {
-        background: url(../images/prettyPhoto/default/sprite_x.png) top left repeat-x;
+        background: url(jigoshop/images/prettyPhoto/default/sprite_x.png) top left repeat-x;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/default/sprite.png) -112px -93px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -112px -93px no-repeat;
       }
     }
     .pp_content .ppt {
@@ -1333,50 +1332,50 @@ div {
     }
     .pp_content_container {
       .pp_left {
-        background: url(../images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;
+        background: url(jigoshop/images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;
         padding-left: 13px;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/default/sprite_y.png) top right repeat-y;
+        background: url(jigoshop/images/prettyPhoto/default/sprite_y.png) top right repeat-y;
         padding-right: 13px;
       }
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/default/sprite_next.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/sprite_next.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/default/sprite_prev.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/sprite_prev.png) center left no-repeat;
       cursor: pointer;
     }
     .pp_expand {
-      background: url(../images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;
       cursor: pointer;
       width: 28px;
       height: 28px;
       &:hover {
-        background: url(../images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;
       cursor: pointer;
       width: 28px;
       height: 28px;
       &:hover {
-        background: url(../images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;
       cursor: pointer;
       width: 30px;
       height: 30px;
     }
     .pp_gallery ul li a {
-      background: url(../images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;
+      background: url(jigoshop/images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;
       border: 1px solid #aaa;
     }
     .pp_social {
@@ -1390,12 +1389,12 @@ div {
     }
     .pp_nav {
       .pp_play {
-        background: url(../images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
         height: 30px;
         width: 30px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;
         background-position: -51px -29px;
         width: 30px;
         height: 30px;
@@ -1403,13 +1402,13 @@ div {
     }
     a {
       &.pp_arrow_previous {
-        background: url(../images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
         margin: 4px 0 0;
         height: 20px;
         width: 20px;
       }
       &.pp_arrow_next {
-        background: url(../images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;
         background-position: -82px -3px;
         margin: 4px 0 0;
         width: 20px;
@@ -1457,128 +1456,128 @@ div {
     }
     .pp_bottom {
       .pp_left {
-        background: url(../images/prettyPhoto/default/sprite.png) -78px -127px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -78px -127px no-repeat;
       }
       .pp_middle {
-        background: url(../images/prettyPhoto/default/sprite_x.png) bottom left repeat-x;
+        background: url(jigoshop/images/prettyPhoto/default/sprite_x.png) bottom left repeat-x;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/default/sprite.png) -112px -127px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/default/sprite.png) -112px -127px no-repeat;
       }
     }
     .pp_loaderIcon {
-      background: url(../images/prettyPhoto/default/loader.gif) center center no-repeat;
+      background: url(jigoshop/images/prettyPhoto/default/loader.gif) center center no-repeat;
     }
   }
   &.light_rounded {
     .pp_top {
       .pp_left {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat;
       }
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;
       cursor: pointer;
     }
     .pp_expand {
-      background: url(../images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;
       width: 75px;
       height: 22px;
       cursor: pointer;
     }
     .pp_nav {
       .pp_play {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -1px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -1px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -24px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -24px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
     }
     .pp_arrow_previous {
-      background: url(../images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat;
     }
     .pp_arrow_next {
-      background: url(../images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat;
     }
     .pp_bottom {
       .pp_left {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat;
       }
     }
   }
   &.dark_rounded {
     .pp_top {
       .pp_left {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat;
       }
     }
     .pp_content_container {
       .pp_left {
-        background: url(../images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y;
       }
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;
       cursor: pointer;
     }
     .pp_expand {
-      background: url(../images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;
       width: 75px;
       height: 22px;
       cursor: pointer;
@@ -1589,32 +1588,32 @@ div {
     }
     .pp_nav {
       .pp_play {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -1px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -1px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -24px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -24px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
     }
     .pp_arrow_previous {
-      background: url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat;
     }
     .pp_arrow_next {
-      background: url(../images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat;
     }
     .pp_bottom {
       .pp_left {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat;
       }
     }
     .pp_loaderIcon {
-      background: url(../images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat;
     }
   }
   &.dark_square {
@@ -1626,26 +1625,26 @@ div {
       margin: 0 85px 0 0;
     }
     .pp_loaderIcon {
-      background: url(../images/prettyPhoto/dark_square/loader.gif) center center no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/loader.gif) center center no-repeat;
     }
     .pp_expand {
-      background: url(../images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;
       width: 75px;
       height: 22px;
       cursor: pointer;
@@ -1653,119 +1652,119 @@ div {
     .pp_nav {
       clear: none;
       .pp_play {
-        background: url(../images/prettyPhoto/dark_square/sprite.png) -1px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -1px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/dark_square/sprite.png) -24px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -24px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
     }
     .pp_arrow_previous {
-      background: url(../images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat;
     }
     .pp_arrow_next {
-      background: url(../images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat;
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;
       cursor: pointer;
     }
   }
   &.light_square {
     .pp_expand {
-      background: url(../images/prettyPhoto/light_square/sprite.png) -31px -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -31px -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -31px -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) 0 -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) 0 -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -1px -1px no-repeat;
       width: 75px;
       height: 22px;
       cursor: pointer;
     }
     .pp_nav {
       .pp_play {
-        background: url(../images/prettyPhoto/light_square/sprite.png) -1px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -1px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/light_square/sprite.png) -24px -100px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -24px -100px no-repeat;
         width: 14px;
         height: 15px;
       }
     }
     .pp_arrow_previous {
-      background: url(../images/prettyPhoto/light_square/sprite.png) 0 -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) 0 -71px no-repeat;
     }
     .pp_arrow_next {
-      background: url(../images/prettyPhoto/light_square/sprite.png) -22px -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/sprite.png) -22px -71px no-repeat;
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/light_square/btnNext.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/btnNext.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/light_square/btnPrevious.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/light_square/btnPrevious.png) center left no-repeat;
       cursor: pointer;
     }
   }
   &.facebook {
     .pp_top {
       .pp_left {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
       }
       .pp_middle {
-        background: url(../images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
+        background: url(jigoshop/images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
       }
     }
     .pp_content_container {
       .pp_left {
-        background: url(../images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
+        background: url(jigoshop/images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
+        background: url(jigoshop/images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
       }
     }
     .pp_expand {
-      background: url(../images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_contract {
-      background: url(../images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
       cursor: pointer;
       &:hover {
-        background: url(../images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
         cursor: pointer;
       }
     }
     .pp_close {
-      background: url(../images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
       width: 22px;
       height: 22px;
       cursor: pointer;
@@ -1774,10 +1773,10 @@ div {
       margin: 0 37px 0 0;
     }
     .pp_loaderIcon {
-      background: url(../images/prettyPhoto/facebook/loader.gif) center center no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/loader.gif) center center no-repeat;
     }
     .pp_arrow_previous {
-      background: url(../images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
       margin-top: 0;
       width: 22px;
       height: 22px;
@@ -1787,7 +1786,7 @@ div {
       }
     }
     .pp_arrow_next {
-      background: url(../images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
       margin-top: 0;
       width: 22px;
       height: 22px;
@@ -1803,33 +1802,33 @@ div {
         padding: 0 3px 0 4px;
       }
       .pp_play {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -1px -123px no-repeat;
         width: 22px;
         height: 22px;
       }
       .pp_pause {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -32px -123px no-repeat;
         width: 22px;
         height: 22px;
       }
     }
     .pp_next:hover {
-      background: url(../images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
       cursor: pointer;
     }
     .pp_previous:hover {
-      background: url(../images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
       cursor: pointer;
     }
     .pp_bottom {
       .pp_left {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
       }
       .pp_middle {
-        background: url(../images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
+        background: url(jigoshop/images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
       }
       .pp_right {
-        background: url(../images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
+        background: url(jigoshop/images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
       }
     }
   }
@@ -1967,7 +1966,7 @@ a {
     float: left;
     display: block;
     &.default a {
-      background: url(../images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
+      background: url(jigoshop/images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
       width: 50px;
       height: 33px;
       display: block;
@@ -1981,7 +1980,7 @@ a {
 a {
   &.pp_next {
     text-indent: -10000px;
-    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+    background: url(jigoshop/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
     width: 49%;
     height: 100%;
     float: right;
@@ -1989,7 +1988,7 @@ a {
   }
   &.pp_previous {
     text-indent: -10000px;
-    background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+    background: url(jigoshop/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
     width: 49%;
     height: 100%;
     float: left;
@@ -2135,11 +2134,11 @@ div {
     cursor: default;
   }
   &.light_rounded .pp_loaderIcon, &.light_square .pp_loaderIcon {
-    background: url(../images/prettyPhoto/light_rounded/loader.gif) center center no-repeat;
+    background: url(jigoshop/images/prettyPhoto/light_rounded/loader.gif) center center no-repeat;
   }
   &.dark_rounded {
     .pp_top .pp_middle, .pp_content, .pp_bottom .pp_middle {
-      background: url(../images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat;
+      background: url(jigoshop/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat;
     }
     .currentTextHolder {
       color: #c4c4c4;

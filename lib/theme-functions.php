@@ -195,7 +195,7 @@ function mb_scripts() {
 
 		// Masonry
 		if ( $layout == 'masonry') {
-			if ( is_home() || is_archive() ) {
+			if ( is_home() || is_archive() && ! is_jigoshop() ) {
 				wp_register_script('imagesLoaded', ('//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js'), false, NULL, true );
 				wp_register_script('masonry', ('//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js'), false, NULL, true );
 				wp_enqueue_script('imagesLoaded');
@@ -234,7 +234,7 @@ function manage_jigoshop_styles() {
 	//first check that jigoshop exists to prevent fatal errors
 	if ( function_exists( 'is_jigoshop' ) ) {
 		//dequeue scripts and styles
-		if ( ! is_shop() || ! is_product() || ! is_product_list() || ! is_cart() || ! is_checkout() ) {
+		if ( ! is_jigoshop() && ! is_cart() && ! is_checkout() ) {
 			wp_dequeue_style( 'jigoshop-required' );
 			wp_dequeue_script( 'jigoshop_global' );
 			wp_dequeue_script( 'prettyphoto' );

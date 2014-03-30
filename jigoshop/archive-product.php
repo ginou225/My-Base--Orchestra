@@ -24,7 +24,7 @@
 ?>
 
 <!-- primary container -->
-<div id="primary_page_content" class="page_content">
+<section id="primary_page_content" class="page_container" role="main">
 
 	<?php if ($store_layout == "lt_sidebar") {
 			get_template_part('templates/pages/shop/store', 'lt');
@@ -38,7 +38,7 @@
 		<?php get_template_part('templates/includes/inc', 'pagination'); ?>
 	</div>
 	
-</div>
+</section>
 <!-- /primary container -->
 
 <?php get_footer(); ?>
