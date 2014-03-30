@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			
-			<?php if(! is_page_template() ) { ?> 
+			<?php if(! is_front_page() ) { ?> 
 			<div class="page_title_container full">
 				<div class="row">
 					<section class="columns large-8">

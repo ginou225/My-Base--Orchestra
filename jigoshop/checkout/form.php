@@ -39,7 +39,7 @@ $get_checkout_url = apply_filters( 'jigoshop_get_checkout_url', jigoshop_cart::g
 	
 
 	<div class="row">
-		<div class="columns-large-12">
+		<div class="columns large-12">
 			<h3 id="payment_methods_heading"><?php _e('Payment Methods', 'jigoshop'); ?></h3>
 			<?php do_action('jigoshop_checkout_payment_methods'); ?>
 		</div>
