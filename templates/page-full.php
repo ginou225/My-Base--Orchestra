@@ -8,7 +8,7 @@ Template Name: Full Page
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
 		<!-- content -->
-		<div class="content columns large-12">
+		<div class="content columns medium-12 large-12">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
