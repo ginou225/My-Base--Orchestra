@@ -33,7 +33,7 @@ Redux Framework Theme Options
 *****************************************/
 
 require_once( dirname( __FILE__ ) . '/lib//ReduxFramework/ReduxCore/framework.php' );
-require_once( dirname( __FILE__ ) . '/lib/ReduxFramework/main-config.php' );
+require_once( dirname( __FILE__ ) . '/lib/theme-options-config.php' );
 
 
 /****************************************
