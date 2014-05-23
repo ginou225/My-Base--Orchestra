@@ -36,39 +36,6 @@ function mb_widgets_init() {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	));
-
-	// Footer
-	register_sidebar(array(
-		'name'          => __( 'Footer', 'mb' ),
-		'id'            => 'footer-widgets',
-		'description'   => __( 'Widgets for Footer.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>'
-	));
-
-	// Shop 
-	register_sidebar(array(
-		'name'          => __( 'Shop', 'mb' ),
-		'id'            => 'shop-widgets',
-		'description'   => __( 'Widgets for Shop.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '',
-		'after_title'   => ''
-	));
-
-	// Events 
-	register_sidebar(array(
-		'name'          => __( 'Event', 'mb' ),
-		'id'            => 'event-widgets',
-		'description'   => __( 'Widgets for Events.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '',
-		'after_title'   => ''
-	));
 }
 
 /**
@@ -209,7 +176,7 @@ function mb_scripts() {
 
 		if (!(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)) {
 			// Regular Build
-			wp_enqueue_script('foundation', get_template_directory_uri() . '/assets/js/foundation/foundationmin.js', array('jquery'), NULL, true );
+			wp_enqueue_script('foundation', get_template_directory_uri() . '/assets/js/foundation/foundation.min.js', array('jquery'), NULL, true );
 
 			wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), NULL, true );
 			wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), NULL, true );
