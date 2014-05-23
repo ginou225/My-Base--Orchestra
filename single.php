@@ -3,7 +3,7 @@
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
 		<!-- content -->
-		<div class="content columns large-8">
+		<div class="content columns medium-8 large-8">
 			<?php while ( have_posts() ) : the_post(); ?>
 				
 				<?php get_template_part( 'templates/partials/content', get_post_format()  ); ?>

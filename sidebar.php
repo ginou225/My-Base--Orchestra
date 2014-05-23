@@ -5,7 +5,7 @@
 
 	$sidebar = get_post_meta($post->ID, "_cmb_sidebar", true); 
 ?>
-<aside class="sidebar columns large-4">
+<aside class="sidebar columns medium-4 large-4">
 
 	<?php 
 		// WP_Query arguments

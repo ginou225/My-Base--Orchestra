@@ -29,20 +29,20 @@
 				</header>
 				
 				<header class="main_header row">
-						        <div class="columns large-5">
+						        <div class="columns medium-5 large-5">
 						        	<h1 class="site_title">
 										<a href="<?php echo home_url( '/' ); ?>" class="logo logo_main_org ir"><?php bloginfo( 'name' ); ?></a>
 									</h1>
 						        </div>
-						        <div class="columns large-7">
-									ddd
+						        <div class="columns medium-7 large-7">
+									header right
 						        </div>
 						    </header>
 			</div>
 
 			<div class="master_nav full_width show-for-large-up" data-magellan-expedition="fixed">
 				<div class="row">
-					<div class="site_nav column large-8">
+					<div class="site_nav column medium-8 large-8">
 						<?php
 							$defaults = array(
 								'theme_location'  => 'primary',
@@ -58,7 +58,7 @@
 							wp_nav_menu( $defaults );
 						?>
 					</div>
-					<div class="column large-4">
+					<div class="column medium-4 large-4">
 						<?php get_search_form(); ?>
 						<div class="social_container right p_absolute">
 							<?php get_template_part('templates/includes/inc', 'sociallist'); ?>
@@ -70,12 +70,14 @@
 			<?php if(! is_front_page() ) { ?> 
 			<div class="page_title_container full">
 				<div class="row">
-					<section class="columns large-8">
+					<section class="columns medium-8 large-8">
 						<h1 class="page_title">
 							<?php get_template_part('templates/includes/inc', 'pagetitle'); ?>
 						</h1>
 					</section>
-					<section class="columns large-4"></section>
+					<section class="columns medium-4 large-4">
+						title right
+					</section>
 				</div>
 			</div>
 			<?php } ?>

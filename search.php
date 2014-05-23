@@ -3,7 +3,7 @@
 <section id="main" class="page_container" role="main">
 	<div class="content_container row">
 		<!-- content -->
-		<div class="content columns large-8">
+		<div class="content columns medium-8 large-8">
 
 			<?php if ( have_posts() ) : ?>
 

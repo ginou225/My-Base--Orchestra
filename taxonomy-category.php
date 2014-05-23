@@ -18,7 +18,7 @@
 		<?php } else { ?>
 
 			<!-- content -->
-			<div class="content columns large-8">
+			<div class="content columns medium-8 large-8">
 				<?php if ($layout == "big_ribbon") {
 						get_template_part('templates/pages/page', 'bigribbon');
 					} elseif ($layout == "small_ribbon") {
